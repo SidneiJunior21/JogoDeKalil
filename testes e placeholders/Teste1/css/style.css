@@ -29,12 +29,22 @@ position: absolute;
 width: 90%;
 bottom: 0px;
 left: 60px;
+z-index: 2;
 
+}
+
+.radar{
+    position: absolute;
+    width: 25%;
+    top: 15%;
+    right: 38%;
+    z-index: -1;
 }
 
 .HUD2{
     position: absolute;
     top: 0%;
     width: 50%;
-    left: 383px;
+    left: 363px;
+    z-index: 1;
 }
