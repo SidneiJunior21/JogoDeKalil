@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.HUD1 {
+position: absolute;
+bottom: 0;
+width: 100%;
+}
+
+.sombra{
+    position: absolute;
+    width: 100%;
+    bottom:  0;
+    opacity: 80%;
+}
+
+.cranio{
+    position: absolute;
+    width: 15%;
+    bottom: 15px;
+}
+
+.luzvelas{
+position: absolute;
+width: 90%;
+bottom: 0px;
+left: 60px;
+
+}
+
+.HUD2{
+    position: absolute;
+    top: 0%;
+    width: 50%;
+    left: 383px;
+}
