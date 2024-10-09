@@ -4,11 +4,16 @@
     box-sizing: border-box;
 }
 
+.fundo {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
 
 .HUD1 {
-position: absolute;
-bottom: 0;
-width: 100%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .sombra{
@@ -16,6 +21,7 @@ width: 100%;
     width: 100%;
     bottom:  0;
     opacity: 80%;
+    z-index: 2;
 }
 
 .cranio{
@@ -38,7 +44,7 @@ z-index: 2;
     width: 25%;
     top: 15%;
     right: 38%;
-    z-index: -1;
+    z-index: 0;
 }
 
 .HUD2{
@@ -46,5 +52,34 @@ z-index: 2;
     top: 0%;
     width: 50%;
     left: 363px;
+    z-index: 2;
+}
+
+.jornal {
+    position: absolute; 
     z-index: 1;
+    width: 25%;
+    top: 60px;
+    left: 20px;
+}
+
+.placa {
+    position: absolute;
+    left: 405px;
+    width: 10%;
+    top: 70px;
+}
+
+.medalhas {
+    position: absolute;
+    left: 400px;
+    top: 240px;
+    width: 10%;
+}
+
+.livro {
+    position: absolute;
+    left: 360px;
+    top: 380px;
+    width: 15%;
 }
