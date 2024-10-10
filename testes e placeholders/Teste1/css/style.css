@@ -83,3 +83,40 @@ z-index: 2;
     top: 380px;
     width: 15%;
 }
+
+.container{
+    position: absolute;
+    left: 260px;
+    bottom: 30px;
+    right: 260px;
+    padding: auto;
+    height: 170px;
+}
+
+.textos {
+    writing-mode: horizontal-tb;
+    color:brown;
+    font-size: 22px;
+    direction: ltr;
+    text-align: left;
+    vertical-align: top;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.botao1{
+    position: absolute;
+    right: 390px;
+    
+    top: 20%;
+    background-color: aqua;
+}
+
+.botao2{
+    position: absolute;
+    right: 390px;
+    
+    top: 25%;
+    background-color: aqua;
+}
