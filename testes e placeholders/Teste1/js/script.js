@@ -21,11 +21,30 @@ function introT2() {
     document.getElementById("texto").innerHTML = 'Imagino que já tenha se familiarizado com a mesa de controle, o botão de cima faz com que a entrada seja permitida, o de baixo ordena as baterias anti-aéreas as disparar, tenha em mente que não temos tempo para falhas, estamos em situação crítica e qualquer erro não será tolerado, não podemos dar chance aos hereges para que nos derrubem. O que eu estou dizendo é que não há confirmação para os botões, um clique é o necessário para ter sua mensagem passada, somente aperte o botão quando tiver certo do que fazer.';
     bot1.addEventListener("click",tutorial2);
     bot2.addEventListener("click",tutorial2)
-
-
 }
 function tutorial2() {
     const bot1 = document.getElementById("bot1");
     const bot2 = document.getElementById("bot2");
     document.getElementById("texto").innerHTML = 'Nos próximos momentos uma frota trazendo mais soldados da guarda da casa Von Velancius para garantir a ordem, permita as entradas deles, e permita assim que eles aparecerem, esses soldados são de extrema importância, em hipótese alguma dispare as baterias na frota, será executado se fizer isso. Estarei deixando você sozinho agora, sirva bem e viva bem, adeus Oficial.'
+    bot1.addEventListener("click",tutorial3);
+    bot2.addEventListener("click",tutorial3)
+}
+function tutorial3(){
+    const bot1 = document.getElementById("bot1");
+    const bot2 = document.getElementById("bot2");
+    document.getElementById("texto").innerHTML = '-VOCÊ VÊ NO RADAR UMA FROTA COM CERCA DE 20 NAVES, TODOS TENDO ASSINATURAS DE GALEÕES DA CASA VON VELANCIUS, LEITURAS APONTAM MAIS DE 40 CANHÕES EM CADA LADO DAS NAVES E UM TAMANHO IGUAL AO DO REGULAMENTO IMPERIAL, NENHUMA LEITURA FOI CAPAZ DE IDENTIFICAR ALGUM TIPO DE MERCADORIA ALÉM DOS SUPRIMENTOS DA NAVE, LEITURAS SUGEREM CERCA DE 70 MIL PESSOAS NA NAVE, PASSAGEM PRIORITÁRIA IDENTIFICADA-'
+    bot1.addEventListener("click",entrada1);
+    bot2.addEventListener("click",negada1)
+}
+function negada1(){
+    const bot1 = document.getElementById("bot1");
+    const bot2 = document.getElementById("bot2");
+    document.getElementById("texto").innerHTML = '-ORDEM DE DISPARO NEGADA, PASSAGEM PROPRITÁRIA IDENTIFICADA, PERMITA A ENTRADA-'
+    bot1.addEventListener("click",entrada1);
+    bot2.addEventListener("click",negada1)
+}
+function entrada1(){
+    const bot1 = document.getElementById("bot1");
+    const bot2 = document.getElementById("bot2");
+    document.getElementById("texto").innerHTML = '-ENTRADA PERMITIDA-'
 }
