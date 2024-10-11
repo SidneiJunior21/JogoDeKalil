@@ -4,7 +4,7 @@ let bot = document.getElementById("bot1");
 bot.addEventListener("click",skip2());
 
 function teste() {
-    document.getElementsByClassName("teste").innerHTML = cuz
+    document.getElementById("teste1").innerHTML = 'cuz'
 }
 
 function skip1 () {
