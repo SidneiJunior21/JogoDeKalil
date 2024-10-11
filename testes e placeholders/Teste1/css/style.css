@@ -108,12 +108,18 @@ z-index: 2;
     vertical-align: top;
 }
 
+.teste{
+    position: absolute;
+    font-size: 100px;
+    z-index: 6;
+}
+
 .botao1{
     position: absolute;
     right: 25%;
-    
+    font-size: 200px;
     top: 20%;
-    background-color: aqua;
+    z-index: 5;;
 }
 
 .botao2{
@@ -121,5 +127,5 @@ z-index: 2;
     right: 25%;
     scale: 100%;
     top: 40%;
-    background-color: aqua;
+    z-index: 5;    ;
 }
