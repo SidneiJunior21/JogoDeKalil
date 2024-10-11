@@ -63,12 +63,12 @@ z-index: 2;
     z-index: -1;
     width: 25%;
     top: 10%;
-    left: 20px;
+    left: 2%;
 }
 
 .placa {
     position: absolute;
-    left: 405px;
+    left: 27%;
     width: 10%;
     top: 70px;
 }
@@ -94,6 +94,7 @@ z-index: 2;
     right: 260px;
     padding: auto;
     height: 170px;
+    background-color: aqua;
 }
 
 .textos {
