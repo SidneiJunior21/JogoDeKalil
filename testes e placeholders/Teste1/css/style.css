@@ -110,7 +110,7 @@ z-index: 2;
 .botao1{
     position: absolute;
     right: 25%;
-    font-size: 200px;
+    font-size: 20px;
     top: 20%;
     z-index: 5;;
 }
@@ -119,6 +119,7 @@ z-index: 2;
     position: absolute;
     right: 25%;
     scale: 100%;
+    font-size: 20px;
     top: 40%;
     z-index: 5;    ;
 }
