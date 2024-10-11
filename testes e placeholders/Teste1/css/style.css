@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .fundo {
@@ -89,29 +90,27 @@ z-index: 2;
 
 .container{
     position: absolute;
-    left: 260px;
-    bottom: 30px;
-    right: 260px;
+    left: 17%;
+    bottom: 5%;
+    right: 17%;
     padding: auto;
-    height: 170px;
+    height: 24%;
     background-color: aqua;
 }
 
 .textos {
+    position: absolute;
     writing-mode: horizontal-tb;
     color:brown;
-    font-size: 22px;
+    font-size: 150%;
     direction: ltr;
     text-align: left;
     vertical-align: top;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
 }
 
 .botao1{
     position: absolute;
-    right: 390px;
+    right: 25%;
     
     top: 20%;
     background-color: aqua;
@@ -119,8 +118,8 @@ z-index: 2;
 
 .botao2{
     position: absolute;
-    right: 390px;
-    
+    right: 25%;
+    scale: 100%;
     top: 40%;
     background-color: aqua;
 }
