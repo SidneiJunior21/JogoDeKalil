@@ -107,12 +107,6 @@ z-index: 2;
     vertical-align: top;
 }
 
-.teste{
-    position: absolute;
-    font-size: 100px;
-    z-index: 6;
-}
-
 .botao1{
     position: absolute;
     right: 25%;
