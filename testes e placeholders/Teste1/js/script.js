@@ -3,6 +3,10 @@ function introT1() {
     const bot1 = document.getElementById("bot1");
     const bot2 = document.getElementById("bot2");
     document.getElementById("texto").innerHTML = 'E não se esqueça do juramento que você fez, "Vivo para servir, servirei até a morte. e se o imperador pedir, mesmo morto vou servir". Imagino que você saiba das responsabilidades que um Sumo Oficial Fronteiriço tem, mas mesmo assim irei relembra-lo, você decide tudo que entra e sai desse planeta, permitindo a passagem de quem deve e usando das anti-aéreas em quem tiver a entrada negada.';
+
+    // Atualiza as consequências
+    document.getElementById("consequenciasT").innerHTML = "Você se lembrou do seu juramento.";
+
     bot1.addEventListener("click", introT2);
     bot2.addEventListener("click", introT2)
 
@@ -12,6 +16,10 @@ function introT2() {
     const bot1 = document.getElementById("bot1");
     const bot2 = document.getElementById("bot2");
     document.getElementById("texto").innerHTML = 'Lembre-se, ninguém que tenha a entrada negada pode simplismente fugir, ter a entrada negada quer dizer que o Deus-Imperador nunca quis sua presença aqui e ter vindo aqui sabendo disso é heresia, e você sabe bem o que acontece com hereges, Oficial, de certo modo tem seu emprego por conta da heresia dos outros.';
+     
+    // Atualiza as consequências
+    document.getElementById("consequenciasT").innerHTML = "Você se lembrou das consequências de suas ações.";
+    
     bot1.addEventListener("click",tutorial1);
     bot2.addEventListener("click",tutorial1)
 }
@@ -47,28 +55,4 @@ function entrada1(){
     const bot1 = document.getElementById("bot1");
     const bot2 = document.getElementById("bot2");
     document.getElementById("texto").innerHTML = '-ENTRADA PERMITIDA-'
-}
-//pedro
-function introT1() {
-    const bot1 = document.getElementById("bot1");
-    const bot2 = document.getElementById("bot2");
-    document.getElementById("texto").innerHTML = 'E não se esqueça do juramento que você fez...';
-    
-    // Atualiza as consequências
-    document.getElementById("consequencias").innerHTML = "Você se lembrou do seu juramento.";
-    
-    bot1.addEventListener("click", introT2);
-    bot2.addEventListener("click", introT2);
-}
-
-function introT2() {
-    const bot1 = document.getElementById("bot1");
-    const bot2 = document.getElementById("bot2");
-    document.getElementById("texto").innerHTML = 'Lembre-se, ninguém que tenha a entrada negada...';
-    
-    // Atualiza as consequências
-    document.getElementById("consequencias").innerHTML = "Você se lembrou das consequências de suas ações.";
-    
-    bot1.addEventListener("click", tutorial1);
-    bot2.addEventListener("click", tutorial1);
 }
