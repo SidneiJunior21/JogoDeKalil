@@ -1,4 +1,4 @@
-// funções q vai guiar a introdução:    
+// funções q vão guiar a introdução:    
 function introT1() {
     const bot1 = document.getElementById("bot1");
     const bot2 = document.getElementById("bot2");
