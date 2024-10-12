@@ -107,6 +107,8 @@ z-index: 2;
     direction: ltr;
     text-align: left;
     vertical-align: top;
+    overflow: scroll;
+    scrollbar-width: none;
 }
 
 .botao1{
