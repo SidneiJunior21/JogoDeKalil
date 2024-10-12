@@ -31,7 +31,8 @@
 .cranio{
     position: absolute;
     width: 15%;
-    bottom: 3%;
+    bottom: 4%;
+    left: 2%;
 }
 
 .luzvelas{
@@ -90,9 +91,9 @@ z-index: 2;
 
 .container{
     position: absolute;
-    left: 17%;
+    left: 25%;
     bottom: 5%;
-    right: 17%;
+    right: 25%;
     padding: auto;
     height: 24%;
 }
@@ -101,7 +102,8 @@ z-index: 2;
     position: absolute;
     writing-mode: horizontal-tb;
     color:brown;
-    font-size: 150%;
+    font-size: 170%;
+    font-family:monospace;
     direction: ltr;
     text-align: left;
     vertical-align: top;
