@@ -48,3 +48,27 @@ function entrada1(){
     const bot2 = document.getElementById("bot2");
     document.getElementById("texto").innerHTML = '-ENTRADA PERMITIDA-'
 }
+//pedro
+function introT1() {
+    const bot1 = document.getElementById("bot1");
+    const bot2 = document.getElementById("bot2");
+    document.getElementById("texto").innerHTML = 'E não se esqueça do juramento que você fez...';
+    
+    // Atualiza as consequências
+    document.getElementById("consequencias").innerHTML = "Você se lembrou do seu juramento.";
+    
+    bot1.addEventListener("click", introT2);
+    bot2.addEventListener("click", introT2);
+}
+
+function introT2() {
+    const bot1 = document.getElementById("bot1");
+    const bot2 = document.getElementById("bot2");
+    document.getElementById("texto").innerHTML = 'Lembre-se, ninguém que tenha a entrada negada...';
+    
+    // Atualiza as consequências
+    document.getElementById("consequencias").innerHTML = "Você se lembrou das consequências de suas ações.";
+    
+    bot1.addEventListener("click", tutorial1);
+    bot2.addEventListener("click", tutorial1);
+}
