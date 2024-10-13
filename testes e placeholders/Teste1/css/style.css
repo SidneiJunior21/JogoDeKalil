@@ -68,7 +68,7 @@ z-index: 2;
 
 @font-face {
     font-family: 'PixelFJVerdana12pt';
-    src: url('fonts/PixelFJVerdana12pt.ttf') format('truetype');
+    src: url('./fonts/VCR_OSD_MONO_1.001.ttf') format('truetype');
 }
 
 .textos {
@@ -76,7 +76,7 @@ z-index: 2;
     z-index: 8;
     color:brown;
     font-size: 170%;
-    font-family:'PixelFJVerdana12pt', sans-serif;
+    font-family:'PixelFJVerdana12pt';
     direction: ltr;
     text-align: left;
     vertical-align: top;
