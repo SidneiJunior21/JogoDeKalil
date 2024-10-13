@@ -1,3 +1,23 @@
+//funções para o manual de campo
+function manualP1() {
+    const setaL = document.getElementById("setaL");
+    const setaR = document.getElementById("setaR");
+
+    document.getElementById("consequenciasT").innerHTML = 'Aqui tem tudo que um Sumo Oficial Fronteiriço precisa saber sobre naves e suas respectivas classificações, antes de permitir a passagem de algo é necessário comparar as características da nave presente na fronteira com as características de sua classe aqui escrita, a entrada só é permitida caso não haja diferença, caso contrário, ative as defesas planetárias e ordene a destruição imediata da nave, o descumprimento de suas ordens resultará em afastamento do cargo, redução do estato social de sua família e a acusação de traição, tenha em mente que apesar de ser uma acusação, ninguém foi capaz de se provar inocente, vale também mencionar que quando aberto o precesso de acusação, é iniciado simultaneamente uma ordem de localizar e destruir sobre você, ou seja, qualquer cidadão imperial tem o direito de te caçar e o dever de te executar caso tenham a chance.<br> Que o Deus-Imperador abencoe sua jornada de trabalho.'
+
+    setaR.onclick = manualP2
+}
+
+function manualP2() {
+    const setaL = document.getElementById("setaL");
+    const setaR = document.getElementById("setaR");
+
+    document.getElementById("consequenciasT").innerHTML = "Nave Classe Galeão<br> teste"
+
+    setaL.onclick = manualP1
+    setaR.onclick = manualP2
+}
+
 // Funções que guiam a introdução
 function introT1() {
     const bot1 = document.getElementById("bot1");
@@ -6,7 +26,7 @@ function introT1() {
     document.getElementById("texto").innerHTML = 'E não se esqueça do juramento que você fez, "Vivo para servir, servirei até a morte. e se o imperador pedir, mesmo morto vou servir". Imagino que você saiba das responsabilidades que um Sumo Oficial Fronteiriço tem, mas mesmo assim irei relembra-lo, você decide tudo que entra e sai desse planeta, permitindo a passagem de quem deve e usando das anti-aéreas em quem tiver a entrada negada.';
 
     // Atualiza as consequências
-    document.getElementById("consequenciasT").innerHTML = "Você se lembrou do seu juramento.";
+    //document.getElementById("consequenciasT").innerHTML = "Você se lembrou do seu juramento.";
 
     // Remove event listeners anteriores e adiciona os novos
     bot1.onclick = introT2;
@@ -20,7 +40,7 @@ function introT2() {
     document.getElementById("texto").innerHTML = 'Lembre-se, ninguém que tenha a entrada negada pode simplesmente fugir, ter a entrada negada quer dizer que o Deus-Imperador nunca quis sua presença aqui e ter vindo aqui sabendo disso é heresia, e você sabe bem o que acontece com hereges, Oficial, de certo modo tem seu emprego por conta da heresia dos outros.';
 
     // Atualiza as consequências
-    document.getElementById("consequenciasT").innerHTML = "Você se lembrou das consequências de suas ações.";
+    //document.getElementById("consequenciasT").innerHTML = "Você se lembrou das consequências de suas ações.";
 
     // Configura os próximos passos
     bot1.onclick = tutorial1;

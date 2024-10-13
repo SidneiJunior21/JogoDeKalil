@@ -21,12 +21,13 @@
         <img src="./images/caveira-px.gif" class="cranioA" alt="cranioA">
         <img src="./images/Gradiente Sombra.png" class="sombra" alt="sombra">
         <img src="./images/LuzesVelas.png" class="luzvelas" alt="luzvelas">
-        <img src="./images/HUD2.png" class="HUD2" alt="HUD2">
+        <img src="./images/HUD2-px.png" class="HUD2" alt="HUD2">
         <img src="./images/RadarPX.gif" class="radar" alt="radar">
-        <img src="./images/Jornal.png" class="jornal" id="jornal" alt="jornal">
+        <img src="./images/manual-px.png" class="jornal" id="jornal" alt="jornal">
         <img src="./images/filtro-de-monitor.png" class="filtroM" alt="filtroM">
         <img src="./images/medalhas-px.png" class="medalhas" alt="medalhas">
         <img src="./images/placa-px.png" class="placa" alt="placa">
+        <img src="./images/Livro-px.png" class="livro" alt="livro">
 
     </div>
     <div class="container">
@@ -41,15 +42,26 @@
 
     <div class="jornal2">
         <div class="consequencias">
-            <p id="consequenciasT">  </p>
-            <!-- Aqui vão as consequências das decisões -->
+            <p id="consequenciasT"></p>
+            <!-- Aqui vai ser o manual de campo com as classificações das naves -->
+        </div>
+        <div>
+            <button class="setaL" id="setaL"> SL </button>
+            <button class="setaR" id="setaR"> SR </button>
+            
         </div>
     </div>
         
     <div id="all">
         <button class="botao1" id="bot1" onclick="introT1()"> b1 </button>  
-        <button  class="botao2" id="bot2" onclick="introT2()"> b2 </button>
+        <button class="botao2" id="bot2" onclick="introT1()"> b2 </button>
     </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        manualP1(); // Chama a função ao carregar a página
+    });
+    </script>
 
 </body>
 </html>
