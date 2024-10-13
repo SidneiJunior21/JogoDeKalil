@@ -4,7 +4,6 @@
     box-sizing: border-box;
     overflow: hidden;
 }
-
 .fundo {
     position: fixed;
     z-index: -1;
@@ -18,41 +17,6 @@
     bottom: 0;
     width: 100%;
     height: 100;
-}* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow: hidden;
-}
-
-.fundo {
-    position: fixed;
-    z-index: -1;
-    width: 100%;
-    height: 100vh;
-    
-}
-
-.HUD1 {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100;
-}
-
-.sombra{
-    position: absolute;
-    width: 100%;
-    bottom:  0%;
-    opacity: 0%;
-    z-index: 3;
-}
-
-.cranio{
-    position: absolute;
-    width: 15%;
-    bottom: 4%;
-    left: 2%;
 }
 
 .luzvelas{
@@ -66,9 +30,9 @@ z-index: 2;
 
 .radar{
     position: absolute;
-    width: 22%;
+    width: 25%;
     top: 15%;
-    right: 40%;
+    right: 38.25%;
     z-index: 0;
 }
 
@@ -90,16 +54,9 @@ z-index: 2;
 
 .placa {
     position: absolute;
-    left: 27%;
-    width: 10%;
-    top: 70px;
-}
-
-.medalhas {
-    position: absolute;
-    left: 400px;
-    top: 240px;
-    width: 10%;
+    left: 28%;
+    width: 9%;
+    top: 10%;
 }
 
 .livro {
@@ -109,26 +66,27 @@ z-index: 2;
     width: 15%;
 }
 
-.container{
-    position: absolute;
-    left: 25%;
-    bottom: 5%;
-    right: 25%;
-    padding: auto;
-    height: 24%;
+@font-face {
+    font-family: 'PixelFJVerdana12pt';
+    src: url('fonts/PixelFJVerdana12pt.ttf') format('truetype');
 }
 
 .textos {
     position: absolute;
-    writing-mode: horizontal-tb;
+    z-index: 8;
     color:brown;
     font-size: 170%;
-    font-family:monospace;
+    font-family:'PixelFJVerdana12pt', sans-serif;
     direction: ltr;
     text-align: left;
     vertical-align: top;
-    overflow: scroll;
-    scrollbar-width: none;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;  
+}
+.textos::-webkit-scrollbar {
+    width: 0; /* Oculta a barra de rolagem */
+    background: transparent; /* Fundo transparente */
 }
 
 .botao1{
@@ -146,23 +104,6 @@ z-index: 2;
     font-size: 20px;
     top: 40%;
     z-index: 5;    ;
-}
-
-.jornal2 {
-    position: absolute; 
-    z-index: -1;
-    width: 25%;
-    top: 18%;
-    left: 4%;
-}
-
-.consequencias {
-    top: 20%; /* 50% da altura da div pai (jornal) */
-    left: 20%; /* 50% da largura da div pai (jornal) */
-    width: 90%; /* Ajusta a largura para se adequar ao espaço */
-    color: black;
-    z-index: 5; /* O texto vai aparecer sobre a imagem do jornal */
-    text-align: left; /* Centraliza o texto dentro da div */
 }
 
 .sombra{
@@ -173,119 +114,76 @@ z-index: 2;
     z-index: 3;
 }
 
-.cranio{
+.cranioA{
     position: absolute;
     width: 15%;
-    bottom: 4%;
-    left: 2%;
-}
-
-.luzvelas{
-position: absolute;
-width: 90%;
-bottom: 0%;
-left: 10%;
-z-index: 2;
-
-}
-
-.radar{
-    position: absolute;
-    width: 22%;
-    top: 15%;
-    right: 40%;
-    z-index: 0;
-}
-
-.HUD2{
-    position: absolute;
-    top: 0%;
-    width: 50%;
-    left: 23.75%;
-    z-index: 2;
-}
-
-.jornal {
-    position: absolute; 
-    z-index: -1;
-    width: 25%;
-    top: 10%;
-    left: 2%;
-}
-
-.placa {
-    position: absolute;
-    left: 27%;
-    width: 10%;
-    top: 70px;
+    bottom: 1%;
+    left: 0%;
 }
 
 .medalhas {
     position: absolute;
-    left: 400px;
-    top: 240px;
+    left: 28%;
+    top: 35%;
     width: 10%;
-}
-
-.livro {
-    position: absolute;
-    left: 360px;
-    top: 380px;
-    width: 15%;
 }
 
 .container{
     position: absolute;
-    left: 25%;
+    left: 19%;
     bottom: 5%;
-    right: 25%;
+    right: 23%;
     padding: auto;
-    height: 24%;
-}
-
-.textos {
-    position: absolute;
-    writing-mode: horizontal-tb;
-    color:brown;
-    font-size: 170%;
-    font-family:monospace;
-    direction: ltr;
-    text-align: left;
-    vertical-align: top;
-    overflow: scroll;
-    scrollbar-width: none;
-}
-
-.botao1{
-    position: absolute;
-    right: 25%;
-    font-size: 20px;
-    top: 20%;
-    z-index: 5;;
-}
-
-.botao2{
-    position: absolute;
-    right: 25%;
-    scale: 100%;
-    font-size: 20px;
-    top: 40%;
-    z-index: 5;    ;
-}
-
-.jornal2 {
-    position: absolute; 
-    z-index: -1;
-    width: 25%;
-    top: 18%;
-    left: 4%;
+    height: 20%;
 }
 
 .consequencias {
-    top: 20%; /* 50% da altura da div pai (jornal) */
-    left: 20%; /* 50% da largura da div pai (jornal) */
-    width: 90%; /* Ajusta a largura para se adequar ao espaço */
+    position: absolute;
+    top: 17.5%; /* 50% da altura da div pai (jornal) */
+    left: 3.5%; /* 50% da largura da div pai (jornal) */    
+    height: 40%;
+    width: 22%; /* Ajusta a largura para se adequar ao espaço */
     color: black;
     z-index: 5; /* O texto vai aparecer sobre a imagem do jornal */
     text-align: left; /* Centraliza o texto dentro da div */
+}
+
+.filtroM {
+    position: absolute;
+    z-index: 5;
+    bottom: 0%;
+    opacity: 100%;
+    width: 100%;
+}
+
+.Caixatitulo {
+    position: absolute;
+    display: flex;
+    text-align: center;
+    z-index: 4;
+    right: 3.5%;
+    left: 85%;
+    bottom: 6%;
+    color: green;
+    height: 17.5%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    font-family: "Press Start 2P", cursive;
+    text-shadow: 
+    2px 2px 0 black,
+    -2px 2px 0 black,
+    2px -2px 0 black,
+    -2px -2px 0 black;
+}
+
+.titulo1 {
+    position: relative;
+    z-index: 4;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
 }
