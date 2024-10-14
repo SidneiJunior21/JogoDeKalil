@@ -35,7 +35,7 @@ function manualP4() {
     const setaL = document.getElementById("setaL");
     const setaR = document.getElementById("setaR");
 
-    document.getElementById("manualT").innerHTML = "<b>Classe Cruzador Pesado</b> <br> <b>Canhões</b> - Entre 90 até 100 <br> <b>Tamanho</b> - Entre 4km por 2km até 6km por 3km <br> b>População</b> - Entre 50 até 70 mil pessoas <br> <b>Armamentos extras</b> - Pode carregar torpedos, armas anti-projétil, aríete, canhões magnéticos e reator do tipo Último Recurso <br> <b>Pode transportar mercadorias?</b> - Não <br> <b>É necessário ter licensa mercante para transportar mercadorias?</b> - Não é permitido transporte de mercadorias <br> <b>Pode ser da Frota Imperial?</b> - Sim <br> <b>É obrigatoriamente da Frota Imperial?</b> - Não <br> <b>Pode ter armamento anti-planetário?</b> - Somente com permissão imperial"
+    document.getElementById("manualT").innerHTML = "<b>Classe Cruzador Pesado</b> <br> <b>Canhões</b> - Entre 90 até 100 <br> <b>Tamanho</b> - Entre 4km por 2km até 6km por 3km <br> <b>População</b> - Entre 50 até 70 mil pessoas <br> <b>Armamentos extras</b> - Pode carregar torpedos, armas anti-projétil, aríete, canhões magnéticos e reator do tipo Último Recurso <br> <b>Pode transportar mercadorias?</b> - Não <br> <b>É necessário ter licensa mercante para transportar mercadorias?</b> - Não é permitido transporte de mercadorias <br> <b>Pode ser da Frota Imperial?</b> - Sim <br> <b>É obrigatoriamente da Frota Imperial?</b> - Não <br> <b>Pode ter armamento anti-planetário?</b> - Somente com permissão imperial"
 
     setaL.onclick = manualP3
     setaR.onclick = manualP5

@@ -122,7 +122,7 @@
     position: absolute;
     text-align: left;
     font-family: 'PixelBook';
-    font-size: 1.5vw;
+    font-size: 1.25vw;
     opacity: 75%;
     direction: ltr;
     text-align: left;
@@ -160,7 +160,6 @@
     width: 10%;
 }
 .game-board #placa {
-    display: none;
     position: absolute;
     left: 28%;
     width: 9%;
