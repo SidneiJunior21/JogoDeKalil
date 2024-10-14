@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.game-board {  /*Usa as proporções da tela para garantir que o jogo se adapte a qualquer resolução */
+    width: 100vw; 
+    height: 100vh;
+}
+.game-board #fundo {
+    position: fixed;
+    z-index: -3;
+    width: 100%;
+    height: 100%; 
+}
+.game-board .HUD1 {
+    width: 100%;
+    height: 37.7%;
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+}
+.game-board .HUD1 #filtroM {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+}
+ .game-board .HUD1 #desenho {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+} 
+.game-board .HUD1 .areacaveira {
+    width: 14.4%;
+    height: 68.8%;
+    position: absolute;
+    z-index: 2;
+    top: 31%;
+}
+.game-board .HUD1 .areacaveira #caveira {
+    width: 100%;
+    position: relative;
+    top: calc(14vh - 6vw);
+}
+.game-board .HUD1 .areatransc {
+    width: 58.85%;
+    height: 49.14%;
+    position: absolute;
+    top: 41.28%;
+    left: 18.6%;
+    z-index: 3;
+}
+@font-face {
+    font-family: 'Pixelito';
+    src: url('./fonts/PixelitoCM.ttf');
+}
+.game-board .HUD1 .areatransc #transcT {
+    position: absolute;
+    z-index: 2;
+    color:brown;
+    font-size: 2vw;
+    font-family:'Pixelito';
+    direction: ltr;
+    text-align: left;
+    vertical-align: top;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    height: 100%;  
+}
+.game-board .HUD1 .areamonitor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 13.75%;
+    height: 46.44%;
+    top: 41.55%;
+    left: 83.79%;
+    padding: 1%;
+    z-index: 2;
+}
+.game-board .HUD1 .areamonitor #monitorT {
+    text-align: center;
+    font-family: "Press Start 2P", cursive;
+    color: green;
+    font-size: 0.9vw;
+    z-index: 2;
+}
+.game-board .manual {
+    width: 23%;
+    height: 45%;
+    position: absolute;
+    z-index: 2;
+    top: 20%;
+    left: 3%;
+}
+.game-board .manual #desenho {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+.game-board .manual .areamanualT {
+    position: absolute;
+    width: 93.22%;
+    height: 81.27%;
+    top: 14.4%;
+    left: 3.3%;
+    padding: 1%;
+    z-index: 3;
+}
+@font-face {
+    font-family: 'PixelBook';
+    src: url('./fonts/PixelBook-Regular.ttf');
+}
+.game-board .manual .areamanualT #manualT {
+    position: absolute;
+    text-align: left;
+    font-family: 'PixelBook';
+    font-size: 1.5vw;
+    opacity: 75%;
+    direction: ltr;
+    text-align: left;
+    vertical-align: top;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    height: 100%;  
+}
+.game-board .manual .botsetas {
+    position: absolute;
+    z-index: 6;
+    width: 23%;
+    left: 42%;
+    top: 90%;
+}
+.game-board #HUD2 {
+    position: absolute;
+    top: 0%;
+    width: 50%;
+    left: 23.75%;
+    z-index: 2;
+}
+.game-board #radar {
+    position: absolute;
+    width: 25%;
+    top: 15%;
+    right: 38.25%;
+    z-index: -1;
+}
+.game-board #medalhas {
+    position: absolute;
+    left: 26%;
+    top: 35%;
+    width: 10%;
+}
+.game-board #placa {
+    display: none;
+    position: absolute;
+    left: 28%;
+    width: 9%;
+    top: 10%;
+}
+.game-board #livro {
+    display: none;
+    position: absolute;
+    left: 26%;
+    top: 55%;
+    width: 15%;
+    z-index: -1;
+}
+.game-board .botoes {
+    position: absolute;
+    right: 25%;
+    font-size: 20px;
+    scale: 200%;
+    top: 20%;
+    z-index: 5;
+}

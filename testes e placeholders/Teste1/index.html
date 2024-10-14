@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style2.css">
     <script src="./js/script.js" defer></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -16,45 +16,58 @@
 
     <div class="game-board"> 
 
-        <img src="./images/fundo-px.png" class="fundo" alt="fundo">
-        <img src="./images/hud-1.5-px.png" class="HUD1" alt="HUD1">
-        <img src="./images/caveira-px.gif" class="cranioA" alt="cranioA">
-        <img src="./images/Gradiente Sombra.png" class="sombra" alt="sombra">
-        <!-- <img src="./images/LuzesVelas.png" class="luzvelas" alt="luzvelas"> -->
-        <img src="./images/HUD2-px.png" class="HUD2" alt="HUD2">
-        <img src="./images/RadarPX.gif" class="radar" alt="radar">
-        <img src="./images/manual-px.png" class="jornal" id="jornal" alt="jornal">
-        <img src="./images/filtro-de-monitor.png" class="filtroM" alt="filtroM">
-        <img src="./images/medalhas-px.png" class="medalhas" alt="medalhas">
-        <img src="./images/placa-px.png" class="placa" alt="placa">
-        <img src="./images/Livro-px.png" class="livro" alt="livro">
+        <img src="./images/fundo-px.png" id="fundo" alt="fundo">
 
-    </div>
-    <div class="container">
-        <div class="textos">
-            <p id="texto">  Devido a acusações de traição, o antigo oficial foi... Afastado do serviço, se é que podemos falar assim. Mas não se preocupe Oficial, se não quiser ter o mesmo final que o antigo teve, faça diferente, tome as decisões certas e as coisas vão dar certo no final, o Deus-Imperador garantirá que vai dar certo.</p>
-        </div>        
+        <div class="HUD1">
 
+            <img src="./images/hud-1.5-px.png" id="desenho" alt="HUD1">
+            <img src="./images/filtro-de-monitor.png" id="filtroM" alt="filtroM">
 
-    </div>
+            <div class="areacaveira">
+                <img src="./images/caveira-px.gif" id="caveira" alt="caveira-gif">
+            </div>
 
-    <div class="Caixatitulo"> <p id="titulo1"> 14° Comandante de Armas </p> </div>
+            <div class="areatransc">
+                    <div class="transc">
+                        <p id="transcT">  Devido a acusações de traição, o antigo oficial foi... Afastado do serviço, se é que podemos falar assim. Mas não se preocupe Oficial, se não quiser ter o mesmo final que o antigo teve, faça diferente, tome as decisões certas e as coisas vão dar certo no final, o Deus-Imperador garantirá que vai dar certo.</p>
+                    </div>
+            </div>
 
-    <div class="jornal2">
-        <div class="consequencias">
-            <p id="consequenciasT"></p>
-            <!-- Aqui vai ser o manual de campo com as classificações das naves -->
+            <div class="areamonitor">
+                <div class="monitor"> 
+                    <p id="monitorT"> 14° Comandante de Armas </p> 
+                </div>
+            </div>
         </div>
-        <div>
-            <button class="setaL" id="setaL"> SL </button>
-            <button class="setaR" id="setaR"> SR </button>
-            
+
+        <div class="manual">
+            <img src="./images/manual-px.png" id="desenho" alt="jornal">
+            <div class="areamanualT">
+                <!-- Aqui vai ser o manual de campo com as classificações das naves: -->
+                <p id="manualT"></p>
+            </div>
+            <div class="botsetas">
+                <button class="setaL" id="setaL"> SL </button>
+                <button class="setaR" id="setaR"> SR </button>
+                
+            </div>
         </div>
-    </div>
+
+        <div class="botoes">
+            <button class="botao1" id="bot1" onclick="introT1()"> b1 </button>  
+            <button class="botao2" id="bot2" onclick="introT1()"> b2 </button>
+        </div>
         
-    <div id="all">
-        <button class="botao1" id="bot1" onclick="introT1()"> b1 </button>  
-        <button class="botao2" id="bot2" onclick="introT1()"> b2 </button>
+        <!-- <img src="./images/Gradiente Sombra.png" class="sombra" alt="sombra"> -->
+        <!-- <img src="./images/LuzesVelas.png" class="luzvelas" alt="luzvelas"> -->
+        <img src="./images/HUD2-px.png" id="HUD2" alt="HUD2">
+        <div class="radar">
+            <img src="./images/RadarPX.gif" id="radar" alt="radar">
+        </div>
+        <img src="./images/medalhas-px.png" id="medalhas" alt="medalhas">
+        <img src="./images/placa-px.png" id="placa" alt="placa">
+        <img src="./images/Livro-px.png" id="livro" alt="livro">
+
     </div>
 
     <script>
