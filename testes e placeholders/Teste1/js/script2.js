@@ -1,19 +1,39 @@
+//função para fade
+window.onload = function() {
+    document.getElementById("FadeOut").style.opacity = '0';
+    document.getElementById("FadeOut").style.zIndex = '-1';
+}
+//animação para X e resetaro jogo caso os a funcao seja chamada 4 vezes
+const marcaX = () => {
+    if(document.getElementById('x3').style.display != 'inline'){document.getElementById('x3').style.display = 'inline'}
+    else if (document.getElementById('x2').style.display != 'inline'){document.getElementById('x2').style.display = 'inline'}
+    else if (document.getElementById('x1').style.display != 'inline'){document.getElementById('x1').style.display = 'inline'}
+    else {
+        document.getElementById("FadeOut").style.opacity = '1';
+        document.getElementById("FadeOut").style.zIndex = '10';
+        setTimeout(()=>location.reload(true),2000)
+    }
+}
+
 //animação para o manual:
 const abremanual = () => {
     document.getElementById('comportaF').style.display = 'none'
+    const botC = document.getElementById('botC')
     if(document.getElementById('comportaA').style.display != 'inline') {
+        botC.disabled = true
         document.getElementById('comportaA').style.display = 'inline'
         document.getElementById('comportaB').style.display = 'none' 
         document.getElementById('comportaA').src = './images/Comporta-do-Manual-abrindo.gif'
         document.getElementById('comportaB').src = 'boga'
-        setTimeout(()=>{document.getElementById('comportaA').style.zIndex = 3},420)
-        
+        setTimeout(()=>{document.getElementById('comportaA').style.zIndex = 3;botC.disabled = false},420)
     } else {
+        botC.disabled = true
         document.getElementById('comportaA').style.zIndex = 9
         document.getElementById('comportaA').style.display = 'none'
         document.getElementById('comportaB').style.display = 'inline' 
         document.getElementById('comportaA').src = 'boga' 
-        document.getElementById('comportaB').src = './images/Comporta-do-Manual-fechando.gif' 
+        document.getElementById('comportaB').src = './images/Comporta-do-Manual-fechando.gif'
+        setTimeout(()=>{botC.disabled = false},420 ) 
 
     }
 }
