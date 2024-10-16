@@ -118,7 +118,7 @@
     font-family: 'PixelBook';
     src: url('./fonts/PixelBook-Regular.ttf');
 }
-.game-board .manual .areamanualT #manualT {
+.game-board .manual .areamanualT .página {
     position: absolute;
     text-align: left;
     font-family: 'PixelBook';
@@ -130,7 +130,8 @@
     overflow-x: hidden;
     overflow-y: scroll;
     scrollbar-width: none;
-    height: 100%;  
+    height: 100%;
+    display: none;
 }
 .game-board .manual .botsetas {
     position: absolute;

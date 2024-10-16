@@ -1,21 +1,115 @@
-const manual = ['Aqui tem tudo que um Sumo Oficial Fronteiriço precisa saber sobre naves e suas respectivas classificações, antes de permitir a passagem de algo é necessário comparar as características da nave presente na fronteira com as características de sua classe aqui escrita, a entrada só é permitida caso não haja diferença, caso contrário, ative as defesas planetárias e ordene a destruição imediata da nave, o descumprimento de suas ordens resultará em afastamento do cargo, redução do estato social de sua família e a acusação de traição, tenha em mente que apesar de ser uma acusação, ninguém foi capaz de se provar inocente, vale também mencionar que quando aberto o precesso de acusação, é iniciado simultaneamente uma ordem de localizar e destruir sobre você, ou seja, qualquer cidadão imperial tem o direito de te caçar e o dever de te executar caso tenham a chance.<br> Que o Deus-Imperador abencoe sua jornada de trabalho.', "<b>Classe Imperatoris</b> <br> <b>Canhões</b> - Entre 100 até 200 <br> <b>Tamanho</b> - Entre 8km por 2km até 10km por 5km <br> <b>População</b> - Entre 100 até 250 mil pessoas <br> <b>Armamentos extras</b> - Pode carregar torpedos, aríete, armas anti-projétil e canhões magnéticos <br> <b>Pode transportar mercadorias?</b> - Não <br> <b>É necessário ter licensa mercante para transportar mercadorias?</b> - Não é permitido transporte de mercadorias <br> <b>Pode ser da Frota Imperial?</b> - Sim <br> <b>É obrigatoriamente da Frota Imperial?</b> - Sim <br> <b>Pode ter armamento anti-planetário?</b> - Deve ter", "<b>Classe Galeão</b> <br> <b>Canhões</b> - Entre 80 até 100 <br> <b>Tamanho</b> - Entre 4km por 2km até 6km por 3km <br> <b>População</b> - Entre 60 até 90 mil pessoas <br> <b>Armamentos extras</b> - Pode carregar torpedos, armas anti-projétil e um aríete <br> <b>Pode transportar mercadorias?</b> - Sim <br> <b>É necessário ter licensa mercante para transportar mercadorias?</b> - Sim <br> <b>Pode ser da Frota Imperial?</b> - Sim <br> <b>É obrigatoriamente da Frota Imperial?</b> - Não <br> <b>Pode ter armamento anti-planetário?</b> - Somente com permissão imperial"]
-
-const percorreManual = (manual, i = 0) => {
+const percorreManual = (pgs, p = 0) => {
     const setaL = document.getElementById("setaL")
     const setaR = document.getElementById("setaR")
 
-    document.getElementById("manualT").innerHTML = manual[i]
+    pgs[p].style.display = 'block'
 
-    if (i = 0) {
-        setaL.onclick = percorreManual(manual, manual.length-1)
-        setaR.onclick = percorreManual(manual, i+1)
+    if (p === 0) {
+        setaL.onclick = () => {
+            pgs[p].style.display = 'none';
+            percorreManual(pgs, pgs.length-1);
+        }
+        setaR.onclick = () => {
+            pgs[p].style.display = 'none';
+            percorreManual(pgs, p+1);
+        }
     }
-    else if (i = manual.length-1) {
-        setaL.onclick = percorreManual(manual, i-1)
-        setaR.onclick = percorreManual(manual, 0)
+    else if (p === pgs.length-1) {
+        setaL.onclick = () => {
+            pgs[p].style.display = 'none';
+            percorreManual(pgs, p-1);
+        }
+        setaR.onclick = () => {
+            pgs[p].style.display = 'none';
+            percorreManual(pgs, 0);
+        }
     }
     else {
-        setaL.onclick = percorreManual(manual, i-1)
-        setaR.onclick = percorreManual(manual, i+1)
+        setaL.onclick = () => {
+            pgs[p].style.display = 'none';
+            percorreManual(pgs, p-1);
+        }
+        setaR.onclick = () => {
+            pgs[p].style.display = 'none';
+            percorreManual(pgs, p+1);
+        }
     }
+}
+
+const páginas = document.getElementsByClassName("página")
+
+percorreManual(páginas)
+
+// Funções que guiam a introdução
+function introT1() {
+    const bot1 = document.getElementById("bot1");
+    const bot2 = document.getElementById("bot2");
+
+    document.getElementById("transcT").innerHTML = 'E não se esqueça do juramento que você fez, "Vivo para servir, servirei até a morte. e se o imperador pedir, mesmo morto vou servir". Imagino que você saiba das responsabilidades que um Sumo Oficial Fronteiriço tem, mas mesmo assim irei relembra-lo, você decide tudo que entra e sai desse planeta, permitindo a passagem de quem deve e usando das anti-aéreas em quem tiver a entrada negada.';
+
+    // Atualiza as consequências
+    //document.getElementById("consequenciasT").innerHTML = "Você se lembrou do seu juramento.";
+
+    // Remove event listeners anteriores e adiciona os novos
+    bot1.onclick = introT2;
+    bot2.onclick = introT2;
+}
+
+function introT2() {
+    const bot1 = document.getElementById("bot1");
+    const bot2 = document.getElementById("bot2");
+
+    document.getElementById("transcT").innerHTML = 'Lembre-se, ninguém que tenha a entrada negada pode simplesmente fugir, ter a entrada negada quer dizer que o Deus-Imperador nunca quis sua presença aqui e ter vindo aqui sabendo disso é heresia, e você sabe bem o que acontece com hereges, Oficial, de certo modo tem seu emprego por conta da heresia dos outros.';
+
+    // Atualiza as consequências
+    //document.getElementById("consequenciasT").innerHTML = "Você se lembrou das consequências de suas ações.";
+
+    // Configura os próximos passos
+    bot1.onclick = tutorial1;
+    bot2.onclick = tutorial1;
+}
+
+function tutorial1() {
+    const bot1 = document.getElementById("bot1");
+    const bot2 = document.getElementById("bot2");
+
+    document.getElementById("transcT").innerHTML = 'Imagino que já tenha se familiarizado com a mesa de controle, o botão de cima faz com que a entrada seja permitida, o de baixo ordena as baterias anti-aéreas a disparar, tenha em mente que não temos tempo para falhas, estamos em situação crítica e qualquer erro não será tolerado, não podemos dar chance aos hereges para que nos derrubem. O que eu estou dizendo é que não há confirmação para os botões, um clique é o necessário para ter sua mensagem passada, somente aperte o botão quando tiver certo do que fazer.';
+
+    bot1.onclick = tutorial2;
+    bot2.onclick = tutorial2;
+}
+
+function tutorial2() {
+    const bot1 = document.getElementById("bot1");
+    const bot2 = document.getElementById("bot2");
+
+    document.getElementById("transcT").innerHTML = 'Nos próximos momentos uma frota trazendo mais soldados da guarda da casa Von Velancius chegará para garantir a ordem, permita as entradas deles, e permita assim que eles aparecerem, esses soldados são de extrema importância, em hipótese alguma dispare as baterias na frota, será executado se fizer isso. Estarei deixando você sozinho agora, sirva bem e viva bem, adeus Oficial.';
+
+    bot1.onclick = tutorial3;
+    bot2.onclick = tutorial3;
+}
+
+function tutorial3() {
+    const bot1 = document.getElementById("bot1");
+    const bot2 = document.getElementById("bot2");
+
+    document.getElementById("transcT").innerHTML = '-VOCÊ VÊ NO RADAR UMA FROTA COM CERCA DE 20 NAVES, TODOS TENDO ASSINATURAS DE GALEÕES DA CASA VON VELANCIUS, LEITURAS APONTAM MAIS DE 40 CANHÕES EM CADA LADO DAS NAVES E UM TAMANHO IGUAL AO DO REGULAMENTO IMPERIAL, NENHUMA LEITURA FOI CAPAZ DE IDENTIFICAR ALGUM TIPO DE MERCADORIA ALÉM DOS SUPRIMENTOS DA NAVE, LEITURAS SUGEREM CERCA DE 70 MIL PESSOAS NA NAVE, PASSAGEM PRIORITÁRIA IDENTIFICADA-';
+    document.getElementById("titulo1").innerHTML = "SISTEMA"
+
+    bot1.onclick = entrada1;
+    bot2.onclick = negada1;
+}
+
+function negada1() {
+    const bot1 = document.getElementById("bot1");
+    const bot2 = document.getElementById("bot2");
+
+    document.getElementById("transcT").innerHTML = '-ORDEM DE DISPARO NEGADA, PASSAGEM PROPRITÁRIA IDENTIFICADA, PERMITA A ENTRADA-';
+
+    bot1.onclick = entrada1;
+    bot2.onclick = negada1;
+}
+
+function entrada1() {
+    document.getElementById("transcT").innerHTML = '-ENTRADA PERMITIDA-';
 }
