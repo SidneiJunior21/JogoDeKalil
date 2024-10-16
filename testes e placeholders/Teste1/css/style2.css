@@ -140,6 +140,11 @@
     left: 42%;
     top: 90%;
 }
+.game-board .manual .comporta{
+    position: absolute;
+    z-index: 3;
+    opacity: 0;
+}
 .game-board #HUD2 {
     position: absolute;
     top: 0%;
