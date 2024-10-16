@@ -5,12 +5,14 @@
     overflow: hidden;
 }
 
+
 .game-board {  /*Usa as proporções da tela para garantir que o jogo se adapte a qualquer resolução */
     width: 100vw; 
     height: 100vh;
 }
 .game-board #FadeOut {
     position: absolute;
+    width: 100%;
     left: 0;
     opacity: 1;
     transition: opacity 2s ease, z-index 2s ease;
@@ -18,6 +20,7 @@
 }
 .game-board #FadeIn {
     position: absolute;
+    width: 100%;
     left: 0;
     opacity: 0;
     transition: opacity 2s ease;
@@ -192,20 +195,20 @@
 .game-board .botaoC:active {
     z-index: -1;
 }
-.game-board #HUD2 {
+.game-board .HUD2 #HUD2 {
     position: absolute;
     top: 0%;
-    width: 50%;
-    left: 23.75%;
+    width: 100%;
+    height: 100%;
     z-index: 2;
 }
 .game-board .HUD2 {
     position: absolute;
-    top: 1%;
-    width: 18%;
-    height: 9%;
-    right: 29.75%;
-    z-index: 3;
+    top: 0%;
+    width: 50%;
+    height: 22%;
+    left: 23.75%;
+    z-index: 2;
 }
 .game-board .HUD2 #x1 {
     position: absolute;
