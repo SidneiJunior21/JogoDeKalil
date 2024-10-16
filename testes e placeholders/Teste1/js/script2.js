@@ -1,3 +1,21 @@
+//animação de esconder/mostrar o manual:
+const abremanual = () => {
+    document.getElementById('comportaF').style.display = 'none'
+    if(document.getElementById('comportaA').style.display != 'inline') {
+        document.getElementById('comportaA').style.display = 'inline'
+        document.getElementById('comportaB').style.display = 'none' 
+        document.getElementById('comportaA').src = './images/Comporta-do-Manual-abrindo.gif'
+        document.getElementById('comportaB').src = 'boga'  
+ 
+    } else {
+       document.getElementById('comportaA').style.display = 'none'
+        document.getElementById('comportaB').style.display = 'inline' 
+        document.getElementById('comportaA').src = 'boga' 
+        document.getElementById('comportaB').src = './images/Comporta-do-Manual-fechando.gif' 
+
+    }
+}
+
 const percorreManual = (pgs, p = 0) => {
     const setaL = document.getElementById("setaL")
     const setaR = document.getElementById("setaR")
