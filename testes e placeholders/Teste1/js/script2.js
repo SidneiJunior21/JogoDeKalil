@@ -5,10 +5,12 @@ const abremanual = () => {
         document.getElementById('comportaA').style.display = 'inline'
         document.getElementById('comportaB').style.display = 'none' 
         document.getElementById('comportaA').src = './images/Comporta-do-Manual-abrindo.gif'
-        document.getElementById('comportaB').src = 'boga'  
- 
+        document.getElementById('comportaB').src = 'boga'
+        setTimeout(()=>{document.getElementById('comportaA').style.zIndex = 3},420)
+        
     } else {
-       document.getElementById('comportaA').style.display = 'none'
+        document.getElementById('comportaA').style.zIndex = 9
+        document.getElementById('comportaA').style.display = 'none'
         document.getElementById('comportaB').style.display = 'inline' 
         document.getElementById('comportaA').src = 'boga' 
         document.getElementById('comportaB').src = './images/Comporta-do-Manual-fechando.gif' 
