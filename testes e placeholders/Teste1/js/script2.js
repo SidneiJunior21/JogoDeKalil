@@ -1,4 +1,4 @@
-//animação de esconder/mostrar o manual:
+//animação para o manual:
 const abremanual = () => {
     document.getElementById('comportaF').style.display = 'none'
     if(document.getElementById('comportaA').style.display != 'inline') {
