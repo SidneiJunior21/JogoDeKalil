@@ -271,14 +271,23 @@
     top: 20%;
     z-index: 5;
 }
-.game-board #bot3 {
+.game-board .botao3 {
     position: absolute;
     right: 25%;
-    font-size: 20px;
-    scale: 200%;
-    bottom: 30%;
+    height: 7%;
+    width: 10%;
+    bottom: 27%;
     z-index: 5;
 }
+.game-board .botao3 #bot3 {
+    position: absolute;
+    right: 0%;
+}
+.game-board .botao3 #bot4 {
+    position: absolute;
+    left: 0%;
+}
+
 
 .game-board .Cdia {
     position: absolute;
