@@ -177,22 +177,36 @@ function tutorial3() {
 function negada1() {
     const bot1 = document.getElementById("bot1");
     const bot2 = document.getElementById("bot2");
+    const bot3 = document.getElementById("bot3");
+    const bot4 = document.getElementById("bot4");
 
     document.getElementById("transcT").innerHTML = '-ORDEM DE DISPARO NEGADA, PASSAGEM PROPRITÁRIA IDENTIFICADA, PERMITA A ENTRADA-';
 
     bot1.onclick = entrada1;
     bot2.onclick = negada1;
+    bot3.onclick = negada1;
+    bot4.onclick = negada1;
 }
 
 function entrada1() {
+    const bot1 = document.getElementById("bot1");
+    const bot2 = document.getElementById("bot2");
+    const bot3 = document.getElementById("bot3");
+    const bot4 = document.getElementById("bot4");
+
     document.getElementById("transcT").innerHTML = '-ENTRADA PERMITIDA-';
+
+    bot1.onclick = entrada1;
+    bot1.onclick = entrada1;
+    bot3.onclick = t1;
+    bot4.onclick = t1;
 }
 //2 trabalhos comuns até o dilema
 function t1() {
     const bot1 = document.getElementById("bot1");
     const bot2 = document.getElementById("bot2");
 
-    document.getElementById("transcT").innerHTML = '-VOCÊ VÊ NO RADAR UMA FROTA COM CERCA DE 20 NAVES, TODOS TENDO ASSINATURAS DE GALEÕES DA CASA VON VELANCIUS, LEITURAS APONTAM MAIS DE 40 CANHÕES EM CADA LADO DAS NAVES E UM TAMANHO IGUAL AO DO REGULAMENTO IMPERIAL, NENHUMA LEITURA FOI CAPAZ DE IDENTIFICAR ALGUM TIPO DE MERCADORIA ALÉM DOS SUPRIMENTOS DA NAVE, LEITURAS SUGEREM CERCA DE 70 MIL PESSOAS NA NAVE, PASSAGEM PRIORITÁRIA IDENTIFICADA-';
+    document.getElementById("transcT").innerHTML = '-boga-';
     document.getElementById("monitorT").innerHTML = "SISTEMA"
 
     bot1.onclick = 2;
