@@ -271,6 +271,15 @@
     top: 20%;
     z-index: 5;
 }
+.game-board #bot3 {
+    position: absolute;
+    right: 25%;
+    font-size: 20px;
+    scale: 200%;
+    bottom: 30%;
+    z-index: 5;
+}
+
 .game-board .Cdia {
     position: absolute;
     top: 1.5%;
