@@ -178,15 +178,29 @@ function tutorial3() {
 function negada1() {
     const bot1 = document.getElementById("bot1");
     const bot2 = document.getElementById("bot2");
+    const bot3 = document.getElementById("bot3");
+    const bot4 = document.getElementById("bot4");
 
     document.getElementById("transcT").innerHTML = '-ORDEM DE DISPARO NEGADA, PASSAGEM PROPRITÁRIA IDENTIFICADA, PERMITA A ENTRADA-';
 
     bot1.onclick = entrada1;
     bot2.onclick = negada1;
+    bot3.onclick = negada1;
+    bot4.onclick = negada1;
 }
 
 function entrada1() {
+    const bot1 = document.getElementById("bot1");
+    const bot2 = document.getElementById("bot2");
+    const bot3 = document.getElementById("bot3");
+    const bot4 = document.getElementById("bot4");
+
     document.getElementById("transcT").innerHTML = '-ENTRADA PERMITIDA-';
+
+    bot1.onclick = entrada1;
+    bot1.onclick = entrada1;
+    bot3.onclick = t1;
+    bot4.onclick = t1;
 }
 //2 trabalhos comuns até o dilema
 const tarefas = [{texto: '-VOCÊ VÊ NO RADAR UMA FROTA COM CERCA DE 7 NAVES, NENHUM TENDO ASSINATURA IMPERIAL. LEITURAS APONTAM MAIS DE 40 CANHÕES EM CADA LADO DAS NAVES E UM TAMANHO ENTRE 3,5 E 2 KM, NENHUMA LEITURA FOI CAPAZ DE IDENTIFICAR ALGUM TIPO DE MERCADORIA ALÉM DOS SUPRIMENTOS DA NAVE, LEITURAS SUGEREM CERCA DE 50 MIL PESSOAS NA NAVE-', resposta: 2}]
