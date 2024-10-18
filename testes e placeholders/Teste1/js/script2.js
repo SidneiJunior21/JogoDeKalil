@@ -1,9 +1,9 @@
-//função para fade
-window.onload = function() {
+//função para fade-out do fundo preto:
+window.onload = () => {
     document.getElementById("FadeOut").style.opacity = '0';
     document.getElementById("FadeOut").style.zIndex = '-1';
 }
-//animação para X e resetaro jogo caso os a funcao seja chamada 4 vezes
+//animação para "X"s e resetar o jogo caso a função seja chamada 4 vezes (4 erros)
 const marcaX = () => {
     if(document.getElementById('x3').style.display != 'inline'){document.getElementById('x3').style.display = 'inline'}
     else if (document.getElementById('x2').style.display != 'inline'){document.getElementById('x2').style.display = 'inline'}
@@ -15,29 +15,36 @@ const marcaX = () => {
     }
 }
 
-//animação para o manual:
+//animação para a comporta do manual:
 const abremanual = () => {
-    document.getElementById('comportaF').style.display = 'none'
-    const botC = document.getElementById('botC')
-    if(document.getElementById('comportaA').style.display != 'inline') {
-        botC.disabled = true
-        document.getElementById('comportaA').style.display = 'inline'
-        document.getElementById('comportaB').style.display = 'none' 
-        document.getElementById('comportaA').src = './images/Comporta-do-Manual-abrindo.gif'
-        document.getElementById('comportaB').src = 'boga'
-        setTimeout(()=>{document.getElementById('comportaA').style.zIndex = 3;botC.disabled = false},420)
-    } else {
-        botC.disabled = true
-        document.getElementById('comportaA').style.zIndex = 9
-        document.getElementById('comportaA').style.display = 'none'
-        document.getElementById('comportaB').style.display = 'inline' 
-        document.getElementById('comportaA').src = 'boga' 
-        document.getElementById('comportaB').src = './images/Comporta-do-Manual-fechando.gif'
-        setTimeout(()=>{botC.disabled = false},420 ) 
+    document.getElementById('comportaF').style.display = 'none' //esconde a imagem estática da comporta fechada
+
+    //define partes importantes para a função como constantes mais fáceis de serem chamadas:
+    const botC = document.getElementById('botC') 
+    const compA = document.getElementById('comportaA')  
+    const compB = document.getElementById('comportaB')
+
+    //animação:
+    if(compA.style.display != 'inline') {   //checa se o gif de abertura não está visível
+        botC.disabled = true //desativa o botão (anti-spam de cliques)
+        compA.style.display = 'inline' //prepara para mostrar o gif da comporta abrindo
+        compB.style.display = 'none' //esconde o gif da comporta fechando
+        compA.src = './images/Comporta-do-Manual-abrindo.gif' //mostra o gif da comporta abrindo (forçando a recarregar pela troca do src)
+        compB.src = '' //muda a src do gif da comporta fechando p forçar o recarregamento quando ele for chamado
+        setTimeout(() => {compA.style.zIndex = 3; botC.disabled = false}, 420) //enquanto o gif da comporta abrindo estiver sendo reproduzido ele é exibido acima do texto (linha 33), porém ao terminar, o coloca abaixo do texto e o botão volta a ser clicável
+    } else { //se o gif de abertura estiver visível, então o gif a ser reproduzido é o da comporta fechando
+        botC.disabled = true //desativa o botão (anti-spam de cliques)
+        compA.style.zIndex = 9 //eleva o gif da comporta abrindo para a próxima chamada
+        compA.style.display = 'none' //esconde o gif da comporta abrindo
+        compB.style.display = 'inline' //prepara para mostrar o gif da comporta abrindo
+        compA.src = '' //muda a src do gif de abertura para forçar o recarregamento na próxima chamada
+        compB.src = './images/Comporta-do-Manual-fechando.gif' //exibe o gif da comporta fechando
+        setTimeout(()=>{botC.disabled = false}, 420 ) //deixa o botão não clicável enquanto o gif é reproduzido
 
     }
 }
 
+//função para percorrer as páginas do manual:
 const percorreManual = (pgs, p = 0) => {
     const setaL = document.getElementById("setaL")
     const setaR = document.getElementById("setaR")
