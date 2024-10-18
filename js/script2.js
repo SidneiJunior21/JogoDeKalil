@@ -3,6 +3,7 @@ window.onload = () => {
     document.getElementById("FadeOut").style.opacity = '0';
     document.getElementById("FadeOut").style.zIndex = '-1';
 }
+
 //animação para "X"s e resetar o jogo caso a função seja chamada 4 vezes (4 erros)
 const marcaX = () => {
     if(document.getElementById('x3').style.display != 'inline'){document.getElementById('x3').style.display = 'inline'}
@@ -188,13 +189,30 @@ function entrada1() {
     document.getElementById("transcT").innerHTML = '-ENTRADA PERMITIDA-';
 }
 //2 trabalhos comuns até o dilema
-function t1() {
-    const bot1 = document.getElementById("bot1");
-    const bot2 = document.getElementById("bot2");
+const tarefas = [{texto: '-VOCÊ VÊ NO RADAR UMA FROTA COM CERCA DE 7 NAVES, NENHUM TENDO ASSINATURA IMPERIAL. LEITURAS APONTAM MAIS DE 40 CANHÕES EM CADA LADO DAS NAVES E UM TAMANHO ENTRE 3,5 E 2 KM, NENHUMA LEITURA FOI CAPAZ DE IDENTIFICAR ALGUM TIPO DE MERCADORIA ALÉM DOS SUPRIMENTOS DA NAVE, LEITURAS SUGEREM CERCA DE 50 MIL PESSOAS NA NAVE-', resposta: 2}]
+const passaTarefa = (tarefas, penaliza, nT = 0) => {
+   const areaT = document.getElementById("transcT")
+   const bot1 = document.getElementById("bot1")
+   const bot2 = document.getElementById("bot2")
+   
+   if (nT <= tarefas.length) {
 
-    document.getElementById("transcT").innerHTML = '-VOCÊ VÊ NO RADAR UMA FROTA COM CERCA DE 20 NAVES, TODOS TENDO ASSINATURAS DE GALEÕES DA CASA VON VELANCIUS, LEITURAS APONTAM MAIS DE 40 CANHÕES EM CADA LADO DAS NAVES E UM TAMANHO IGUAL AO DO REGULAMENTO IMPERIAL, NENHUMA LEITURA FOI CAPAZ DE IDENTIFICAR ALGUM TIPO DE MERCADORIA ALÉM DOS SUPRIMENTOS DA NAVE, LEITURAS SUGEREM CERCA DE 70 MIL PESSOAS NA NAVE, PASSAGEM PRIORITÁRIA IDENTIFICADA-';
-    document.getElementById("monitorT").innerHTML = "SISTEMA"
+    areaT.innerHTML = tarefas[nT].texto
 
-    bot1.onclick = 2;
-    bot2.onclick = 1;
+    const processaClique = (resposta, mensagem) => {
+        if (resposta === tarefas[nT].resposta) {
+            areaT.innerHTML = mensagem
+            setTimeout(passaTarefa(tarefas, nT+1), 2000)
+        }
+        else {
+            areaT.innerHTML = mensagem
+            setTimeout(penaliza(), 2000)
+            passaTarefa(tarefas, nT+1)
+        }
+    }
+
+    bot1.onclick = () => {processaClique(1, '-ACESSO PERMITIDO-')}
+    bot2.onclick = () => {processaClique(2, '-ACESSO NEGADO-')}
+    }
 }
+passaTarefa(tarefas, marcaX)
