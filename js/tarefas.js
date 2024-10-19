@@ -1,9 +1,9 @@
 //funções para executar transição fade
-function fadeout() {
+const fadeout = () => {
     document.getElementById("FadeOut").style.opacity = '1';
     document.getElementById("FadeOut").style.zIndex = '10';
 }
-function fadein() {
+const fadein = () => {
     document.getElementById("FadeOut").style.opacity = '0';
     document.getElementById("FadeOut").style.zIndex = '-1';
 }

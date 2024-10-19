@@ -3,26 +3,26 @@ window.onload = () => {
     fadein()
 }
 //animação para Bot1
-function b1A () {
+const b1A = () => {
     const b1 = document.getElementById('b1') //identifacação do b1
 
     b1.onclick = b1.src = '' //combinado com o de baixo faz com q o gif resete
     b1.onclick = b1.src = './images/Botao1.gif'
 }
 //desativação do Bot1
-function b1D () {
+const b1D = () => {
     const b1 = document.getElementById('b1') //identifacação do b1
         b1.onclick = b1.src = './images/Botao1.png' //troca o gif pelo png
 }
 //animação para Bot2
-function b2A () {
+const b2A = () => {
     const b1 = document.getElementById('b2') //identifacação do b1
 
     b1.onclick = b2.src = '' //combinado com o de baixo faz com q o gif resete
     b1.onclick = b2.src = './images/Botao2.gif'
 }
 //desativação do Bot2
-function b2D () {
+const b2D = () => {
     const b2 = document.getElementById('b2') //identifacação do b1
         b2.onclick = b2.src = './images/Botao2.png' //troca o gif pelo png
 }
@@ -117,7 +117,7 @@ const páginas = document.getElementsByClassName("página")
 percorreManual(páginas)
 
 // Funções que guiam a introdução
-function preIntro() {
+const preIntro = () => {
     const bot1 = document.getElementById("bot1");
     const bot2 = document.getElementById("bot2");
     const bot3 = document.getElementById("bot3");
@@ -133,7 +133,7 @@ function preIntro() {
     bot4.onclick = nadakk;
 }
 
-function introT1() {
+const introT1 = () => {
     const bot1 = document.getElementById("bot1");
     const bot2 = document.getElementById("bot2");
     const bot3 = document.getElementById("bot3");
@@ -149,7 +149,7 @@ function introT1() {
     bot4.onclick = preIntro;
 }
 
-function introT2() {
+const introT2 = () => {
     const bot1 = document.getElementById("bot1");
     const bot2 = document.getElementById("bot2");
     const bot3 = document.getElementById("bot3");
@@ -165,7 +165,7 @@ function introT2() {
     bot4.onclick = introT1;
 }
 
-function tutorial1() {
+const tutorial1 = () => {
     const bot1 = document.getElementById("bot1");
     const bot2 = document.getElementById("bot2");
     const bot3 = document.getElementById("bot3");
@@ -177,7 +177,7 @@ function tutorial1() {
     bot4.onclick = introT2;
 }
 
-function tutorial2() {
+const tutorial2 = () => {
     const bot1 = document.getElementById("bot1");
     const bot2 = document.getElementById("bot2");
     const bot3 = document.getElementById("bot3");
@@ -189,7 +189,7 @@ function tutorial2() {
     bot4.onclick = tutorial1;
 }
 
-function tutorial3() {
+const tutorial3 = () => {
     const bot1 = document.getElementById("bot1");
     const bot2 = document.getElementById("bot2");
     const bot3 = document.getElementById("bot3");
@@ -206,7 +206,7 @@ function tutorial3() {
     bot4.disabled = true;
 }
 
-function negada1() {
+const negada1 = () => {
     const bot1 = document.getElementById("bot1");
     const bot2 = document.getElementById("bot2");
     const bot3 = document.getElementById("bot3");
@@ -221,7 +221,7 @@ function negada1() {
     bot4.disabled = true;
 }
 
-function entrada1() {
+const entrada1 = () => {
     const bot1 = document.getElementById("bot1");
     const bot2 = document.getElementById("bot2");
     const bot3 = document.getElementById("bot3");
@@ -263,7 +263,7 @@ function entrada1() {
     }
 }
 //passaTarefa(tarefas, marcaX)*/
-function tarefa1() {
+const tarefa1 = () => {
     const bot1 = document.getElementById("bot1");
     const bot2 = document.getElementById("bot2");
     const bot3 = document.getElementById("bot3");
@@ -277,7 +277,7 @@ function tarefa1() {
     bot3.disabled = true;
     bot4.disabled = true;
 }
-function tarefa2() {
+const tarefa2 = () => {
     const bot1 = document.getElementById("bot1");
     const bot2 = document.getElementById("bot2");
     const bot3 = document.getElementById("bot3");
@@ -291,7 +291,8 @@ function tarefa2() {
     bot3.disabled = true;
     bot4.disabled = true;
 }
-function dilema1() {
+//dilema do dia
+const dilema1 = () => {
     const bot1 = document.getElementById("bot1");
     const bot2 = document.getElementById("bot2");
     const bot3 = document.getElementById("bot3");
@@ -307,7 +308,7 @@ function dilema1() {
     bot3.disabled = true;
     bot4.disabled = true;
 }
-function dilema11() {
+const dilema11 = () => {
     const bot1 = document.getElementById("bot1");
     const bot2 = document.getElementById("bot2");
     const bot3 = document.getElementById("bot3");
@@ -325,7 +326,7 @@ function dilema11() {
     bot3.disabled = true;
     bot4.disabled = true;
 }
-function dilema1H() {
+const dilema1H = () => {
     const bot1 = document.getElementById("bot1");
     const bot2 = document.getElementById("bot2");
     const bot3 = document.getElementById("bot3");
@@ -337,7 +338,7 @@ function dilema1H() {
     areaT.innerHTML = '-OBRIGAÇÕES DIÁRIAS CONCLUÍDAS, SAIA IMEDIATAMENTE DA SALA E RETORNE AMANHÃ, SERÁ PUNIDO DE ACORDO COM O REGULAMENTO CASO NÃO RETORNE, APROVEITE O SEU DIA, OFICIAL-'
     espera(fdia1)
 }
-function dilema1D() {
+const dilema1D = () => {
     const bot1 = document.getElementById("bot1");
     const bot2 = document.getElementById("bot2");
     const bot3 = document.getElementById("bot3");
@@ -349,7 +350,8 @@ function dilema1D() {
     areaT.innerHTML = '-QUANTIDADE DE DESTROÇOS EM ORBITA MUITO ALTA, CESSANDO ATIVIDADE FRONTEIRIÇA DIÁRIA, SAIA IMEDIATAMENTE DA SALA E RETORNE AMANHÃ, SERÁ PUNIDO DE ACORDO COM O REGULAMENTO CASO NÃO RETORNE, APROVEITE O SEU DIA, OFICIAL-'
     espera(fdia1)
 }
-function fdia1() {
+//função para puxar próximo dia 
+const fdia1 = () => {
     fadeout();
     espera(cdia2())
 }
