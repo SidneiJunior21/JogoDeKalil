@@ -78,22 +78,35 @@
                 </p>
             </div>
             <div class="botsetas">
-                <button class="setaL" id="setaL"> SL </button>
-                <button class="setaR" id="setaR"> SR </button>
+                <button class="setaL1" id="setaL1"> < </button>
+                <button class="setaR1" id="setaR1"> > </button>
             </div>
             <img class="comportaF" id="comportaF" src="./images/Comporta do Manual-px.png" alt="comportaF">
             <img class="comportaA" id="comportaA" src="./images/Comporta-do-Manual-abrindo.gif">
             <img class="comportaB" id="comportaB" src="./images/Comporta-do-Manual-fechando.gif">
         </div>
-        <button class="botaoC" id="botC" onclick="abremanual()"> bc </button>  
-
-        <div class="botoes">
-            <button class="botao1" id="bot1"> b1 </button>  
-            <button class="botao2" id="bot2"> b2 </button>  
+        <div class="botaoC">
+            <button id="botC" onclick="abremanual()"></button> 
+            <img src="./images/BotaoC.gif" id="botCGif">     
         </div>
-        <div class="botao3" >
-        <button id="bot3" onclick="introT1()"> AD </button>
-        <button id="bot4"> RD </button>
+        <div class="botao1">
+            <button id="bot1"> b1 </button> 
+            <img src="./images/Botao1.png" id="b1"> 
+        </div>
+        <div class="botao2">
+            <button id="bot2"> b2 </button>  
+            <img src="./images/Botao2.png" id="b2"> 
+        </div>
+        <div class="botoes2">
+            <img src="./images/Fundo para Setas.png" id="fundsetas">
+            <div class="botao3" >
+                <button id="bot3" onclick="introT1()"></button>
+                <img src="./images/setaR.png" id="setaR">
+            </div>
+           <div class="botao4">
+                <button id="bot4"> RD </button>
+                <img src="./images/setaL.png" id="setaL">
+            </div>
         </div>
         <div class="HUD2">
             <img src="./images/HUD2-px.png" id="HUD2" alt="HUD2">
@@ -103,8 +116,10 @@
         </div>
         <div class="Cdia">
             <img src="./images/contador de dia.png" id="Cdia">
-            <p id="Tdia"> 1 </p>
-            <img src="./images/sobreposição do dia.png" id="Sdia">
+            <div class="tela">
+                <p id="Tdia"> 1 </p>
+                <img src="./images/sobreposição do dia.png" id="Sdia">
+            </div>
         </div>
         <button id="botX" onclick="marcaX()"> bX </button>
         <img src="./images/Fade.png" id="FadeOut">

@@ -26,7 +26,7 @@ const passaTarefa = (tarefas, penaliza, nT = 0) => {
     bot2.onclick = processaClique(2)
     }
 }
-passaTarefa(tarefas, marcaX)
+//passaTarefa(tarefas, marcaX)
 
 const exibeDilema = () => {
 

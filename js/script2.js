@@ -3,6 +3,30 @@ window.onload = () => {
     document.getElementById("FadeOut").style.opacity = '0';
     document.getElementById("FadeOut").style.zIndex = '-1';
 }
+//animação para Bot1
+function b1A () {
+    const b1 = document.getElementById('b1') //identifacação do b1
+
+    b1.onclick = b1.src = '' //combinado com o de baixo faz com q o gif resete
+    b1.onclick = b1.src = './images/Botao1.gif'
+}
+//desativação do Bot1
+function b1D () {
+    const b1 = document.getElementById('b1') //identifacação do b1
+        b1.onclick = b1.src = './images/Botao1.png' //troca o gif pelo png
+}
+//animação para Bot2
+function b2A () {
+    const b1 = document.getElementById('b2') //identifacação do b1
+
+    b1.onclick = b2.src = '' //combinado com o de baixo faz com q o gif resete
+    b1.onclick = b2.src = './images/Botao2.gif'
+}
+//desativação do Bot2
+function b2D () {
+    const b2 = document.getElementById('b2') //identifacação do b1
+        b2.onclick = b2.src = './images/Botao2.png' //troca o gif pelo png
+}
 
 //animação para "X"s e resetar o jogo caso a função seja chamada 4 vezes (4 erros)
 const marcaX = () => {
@@ -21,13 +45,16 @@ const abremanual = () => {
     document.getElementById('comportaF').style.display = 'none' //esconde a imagem estática da comporta fechada
 
     //define partes importantes para a função como constantes mais fáceis de serem chamadas:
-    const botC = document.getElementById('botC') 
+    const botC = document.getElementById('botC')
+    const botCGif = document.getElementById('botCGif')
     const compA = document.getElementById('comportaA')  
     const compB = document.getElementById('comportaB')
 
     //animação:
     if(compA.style.display != 'inline') {   //checa se o gif de abertura não está visível
         botC.disabled = true //desativa o botão (anti-spam de cliques)
+        botCGif.src = '' //combinado com o de baixo faz com q o gif resete
+        botCGif.src = './images/BotaoC.gif'
         compA.style.display = 'inline' //prepara para mostrar o gif da comporta abrindo
         compB.style.display = 'none' //esconde o gif da comporta fechando
         compA.src = './images/Comporta-do-Manual-abrindo.gif' //mostra o gif da comporta abrindo (forçando a recarregar pela troca do src)
@@ -35,6 +62,8 @@ const abremanual = () => {
         setTimeout(() => {compA.style.zIndex = 3; botC.disabled = false}, 420) //enquanto o gif da comporta abrindo estiver sendo reproduzido ele é exibido acima do texto (linha 33), porém ao terminar, o coloca abaixo do texto e o botão volta a ser clicável
     } else { //se o gif de abertura estiver visível, então o gif a ser reproduzido é o da comporta fechando
         botC.disabled = true //desativa o botão (anti-spam de cliques)
+        botCGif.src = '' //combinado com o de baixo faz com q o gif resete
+        botCGif.src = './images/BotaoC.gif'
         compA.style.zIndex = 9 //eleva o gif da comporta abrindo para a próxima chamada
         compA.style.display = 'none' //esconde o gif da comporta abrindo
         compB.style.display = 'inline' //prepara para mostrar o gif da comporta abrindo
@@ -47,8 +76,8 @@ const abremanual = () => {
 
 //função para percorrer as páginas do manual:
 const percorreManual = (pgs, p = 0) => {
-    const setaL = document.getElementById("setaL")
-    const setaR = document.getElementById("setaR")
+    const setaL = document.getElementById("setaL1")
+    const setaR = document.getElementById("setaR1")
 
     pgs[p].style.display = 'block'
 
@@ -166,12 +195,21 @@ function tutorial3() {
     const bot2 = document.getElementById("bot2");
     const bot3 = document.getElementById("bot3");
     const bot4 = document.getElementById("bot4");
+    b1A();
+    b2A();
 
     document.getElementById("transcT").innerHTML = '-VOCÊ VÊ NO RADAR UMA FROTA COM CERCA DE 20 NAVES, TODOS TENDO ASSINATURAS DE GALEÕES DA CASA VON VELANCIUS, LEITURAS APONTAM MAIS DE 40 CANHÕES EM CADA LADO DAS NAVES E UM TAMANHO IGUAL AO DO REGULAMENTO IMPERIAL, NENHUMA LEITURA FOI CAPAZ DE IDENTIFICAR ALGUM TIPO DE MERCADORIA ALÉM DOS SUPRIMENTOS DA NAVE, LEITURAS SUGEREM CERCA DE 70 MIL PESSOAS NA NAVE, PASSAGEM PRIORITÁRIA IDENTIFICADA-';
     document.getElementById("monitorT").innerHTML = "SISTEMA"
 
-    bot1.onclick = entrada1;
-    bot2.onclick = negada1;
+    bot1.onclick = () => {
+        b1A();
+        entrada1();
+    };
+    bot2.onclick = () => {
+        b2A();
+        negada1();
+    };
+    bot3.onclick = tutorial3
     bot4.onclick = tutorial3;
 }
 
@@ -183,9 +221,15 @@ function negada1() {
 
     document.getElementById("transcT").innerHTML = '-ORDEM DE DISPARO NEGADA, PASSAGEM PROPRITÁRIA IDENTIFICADA, PERMITA A ENTRADA-';
 
-    bot1.onclick = entrada1;
-    bot2.onclick = negada1;
-    bot3.onclick = negada1;
+    bot1.onclick = () => {
+        b1A();
+        entrada1();
+    };
+    bot2.onclick = () => {
+        b2A();
+        negada1();
+    }
+    bot3.onclick = tutorial3;
     bot4.onclick = negada1;
 }
 
@@ -199,8 +243,8 @@ function entrada1() {
 
     bot1.onclick = entrada1;
     bot1.onclick = entrada1;
-    bot3.onclick = t1;
-    bot4.onclick = t1;
+    bot3.onclick = () => {passaTarefa(tarefas, marcaX)};
+    bot4.onclick = () => {passaTarefa(tarefas, marcaX)};
 }
 //2 trabalhos comuns até o dilema
 const tarefas = [{texto: '-VOCÊ VÊ NO RADAR UMA FROTA COM CERCA DE 7 NAVES, NENHUM TENDO ASSINATURA IMPERIAL. LEITURAS APONTAM MAIS DE 40 CANHÕES EM CADA LADO DAS NAVES E UM TAMANHO ENTRE 3,5 E 2 KM, NENHUMA LEITURA FOI CAPAZ DE IDENTIFICAR ALGUM TIPO DE MERCADORIA ALÉM DOS SUPRIMENTOS DA NAVE, LEITURAS SUGEREM CERCA DE 50 MIL PESSOAS NA NAVE-', resposta: 2}]
@@ -229,4 +273,4 @@ const passaTarefa = (tarefas, penaliza, nT = 0) => {
     bot2.onclick = () => {processaClique(2, '-ACESSO NEGADO-')}
     }
 }
-passaTarefa(tarefas, marcaX)
+//passaTarefa(tarefas, marcaX)

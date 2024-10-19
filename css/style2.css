@@ -155,9 +155,28 @@
 .game-board .manual .botsetas {
     position: absolute;
     z-index: 6;
-    width: 23%;
-    left: 42%;
+    width: 88%;
+    left: 6%;
     top: 92%;
+    height: 5%;
+}
+.game-board .manual .botsetas .setaL1 {
+    position: absolute;
+    opacity: 20%;
+    background-color: darkkhaki;
+    color: black;
+    left: 0;
+    width: 6%;
+    height: 100%;
+}
+.game-board .manual .botsetas .setaR1 {
+    position: absolute;
+    opacity: 20%;
+    background-color: darkkhaki;
+    color: black;
+    right: 0;
+    width: 6%;
+    height: 100%;
 }
 .game-board .manual .comportaF{
     display: inline;
@@ -189,10 +208,28 @@
 }
 .game-board .botaoC {
     position: absolute;
-    top: 70%;
-    left: 18%;
+    top: 37%;
+    left: 26.5%;
+    width: 3.5%;
+    height: 7%;
     z-index: 1;
     transition: z-index 0.75s ease;
+}
+.game-board .botaoC #botC {
+    position: absolute;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0%;
+}
+.game-board .botaoC #botCGif {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
 }
 .game-board .botaoC:active {
     z-index: -1;
@@ -263,32 +300,108 @@
     width: 15%;
     z-index: -1;
 }
-.game-board .botoes {
+.game-board .botao1 {
     position: absolute;
     right: 25%;
+    width: 3.5%;
+    height: 7%;
     font-size: 20px;
-    scale: 200%;
     top: 20%;
     z-index: 5;
 }
-.game-board .botao3 {
+.game-board .botao1 #bot1 {
     position: absolute;
-    right: 25%;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    opacity: 0%;
+    z-index: 6;
+}
+.game-board .botao1 #b1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.game-board .botao2 {
+    position: absolute;
+    right: 15%;
+    width: 3.5%;
     height: 7%;
-    width: 10%;
-    bottom: 27%;
+    font-size: 20px;
+    top: 20%;
     z-index: 5;
 }
-.game-board .botao3 #bot3 {
+.game-board .botao2 #bot2 {
     position: absolute;
-    right: 0%;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    opacity: 0%;
+    z-index: 6;
 }
-.game-board .botao3 #bot4 {
+.game-board .botao2 #b2 {
     position: absolute;
-    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
 }
-
-
+.game-board .botoes2 {
+    position: absolute;
+    right: 25%;
+    height: 18%;
+    width: 18%;
+    bottom: 15%;
+}
+.game-board .botoes2 #fundsetas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.game-board .botoes2 .botao3 {
+    position: absolute;
+    top: 5%;
+    right: 15%;
+    height: 30%;
+    width: 15%;
+    z-index: 5;
+}
+.game-board .botoes2 .botao3 #bot3 {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    opacity: 0%;
+    z-index: 10;
+}
+.game-board .botoes2 .botao3 #setaR {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.game-board .botoes2 .botao4 {
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    height: 30%;
+    width: 15%;
+    z-index: 5;
+}
+.game-board .botoes2 .botao4 #bot4 {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    opacity: 0%;
+    z-index: 10;
+}
+.game-board .botoes2 .botao4 #setaL {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
 .game-board .Cdia {
     position: absolute;
     top: 1.5%;
@@ -301,21 +414,39 @@
     width: 100%;
     height: 100%;
 }
-.game-board .Cdia #Sdia {
+.game-board .Cdia .tela{
     position: absolute;
-    width: 33%;
-    height: 90%;
-    top: 4%;
-    right: 2%;
+    width: 26%;
+    height: 70%;
+    top: 15%;
+    right: 7.1%;
+}
+.game-board .Cdia .tela #Sdia {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     z-index: 3;
 }
-.game-board .Cdia #Tdia {
+/*.game-board .Cdia #Tdia {
     position: absolute;
     text-align: center;
-    top:25%;
-    right: 7%;
+    top:23%;
+    right: 8%;
     font-family: "Press Start 2P", cursive;
-    color:blue;
+    color:green;
+    font-size: 4vw;
+    z-index: 2;
+}*/
+.game-board .Cdia #Tdia {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 5%;
+    width: 100%;
+    height: 100%;
+    font-family: "Press Start 2P", cursive;
+    color:green;
     font-size: 4vw;
     z-index: 2;
 }
