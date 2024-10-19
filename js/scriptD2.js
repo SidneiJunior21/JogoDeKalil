@@ -1,4 +1,4 @@
-function cdia2() {
+const cdia2 = () => {
     espera(() => {
         fadein();
     });
