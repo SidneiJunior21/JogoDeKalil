@@ -336,7 +336,7 @@ const dilema1H = () => {
 
     monitorT.innerHTML = 'SISTEMA'
     areaT.innerHTML = '-OBRIGAÇÕES DIÁRIAS CONCLUÍDAS, SAIA IMEDIATAMENTE DA SALA E RETORNE AMANHÃ, SERÁ PUNIDO DE ACORDO COM O REGULAMENTO CASO NÃO RETORNE, APROVEITE O SEU DIA, OFICIAL-'
-    espera(fdia1)
+    espera5(fdia1)
 }
 const dilema1D = () => {
     const bot1 = document.getElementById("bot1");
@@ -348,7 +348,7 @@ const dilema1D = () => {
 
     monitorT.innerHTML = 'SISTEMA'
     areaT.innerHTML = '-QUANTIDADE DE DESTROÇOS EM ORBITA MUITO ALTA, CESSANDO ATIVIDADE FRONTEIRIÇA DIÁRIA, SAIA IMEDIATAMENTE DA SALA E RETORNE AMANHÃ, SERÁ PUNIDO DE ACORDO COM O REGULAMENTO CASO NÃO RETORNE, APROVEITE O SEU DIA, OFICIAL-'
-    espera(fdia1)
+    espera5(fdia1)
 }
 //função para puxar próximo dia 
 const fdia1 = () => {
