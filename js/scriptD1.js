@@ -1,3 +1,7 @@
+//função para fade-out do fundo preto:
+window.onload = () => {
+    fadein()
+}
 //função generica para animações dos botões
 const animaBotao = (BotId, imgSrc, reset = true) => {
     const botao = document.getElementById(botId);
