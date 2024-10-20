@@ -484,3 +484,6 @@
     font-size: 4vw;
     z-index: 2;
 }
+.dialogos {
+    display: none;
+}
