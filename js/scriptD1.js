@@ -187,7 +187,9 @@ const dilema1H = () => {
     const areaT = document.getElementById("transcT");
     const monitorT = document.getElementById("monitorT");
     bot1.disabled = true;
+    b1D();
     bot2.disabled = true;
+    b2D();
 
     monitorT.innerHTML = 'SISTEMA'
     areaT.innerHTML = '-OBRIGAÇÕES DIÁRIAS CONCLUÍDAS, SAIA IMEDIATAMENTE DA SALA E RETORNE AMANHÃ, SERÁ PUNIDO DE ACORDO COM O REGULAMENTO CASO NÃO RETORNE, APROVEITE O SEU DIA, OFICIAL-'
@@ -201,7 +203,9 @@ const dilema1D = () => {
     const areaT = document.getElementById("transcT");
     const monitorT = document.getElementById("monitorT");
     bot1.disabled = true;
+    b1D();
     bot2.disabled = true;
+    b2D();
 
     monitorT.innerHTML = 'SISTEMA'
     areaT.innerHTML = '-QUANTIDADE DE DESTROÇOS EM ORBITA MUITO ALTA, CESSANDO ATIVIDADE FRONTEIRIÇA DIÁRIA, SAIA IMEDIATAMENTE DA SALA E RETORNE AMANHÃ, SERÁ PUNIDO DE ACORDO COM O REGULAMENTO CASO NÃO RETORNE, APROVEITE O SEU DIA, OFICIAL-'
