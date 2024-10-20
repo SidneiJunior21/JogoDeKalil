@@ -1,3 +1,7 @@
+//função para fade-out do fundo preto:
+window.onload = () => {
+    fadein()
+}
 //animação para Bot1
 const b1A = () => {
     const b1 = document.getElementById('b1') //identifacação do b1
@@ -5,10 +9,10 @@ const b1A = () => {
     b1.onclick = b1.src = '' //combinado com o de baixo faz com q o gif resete
     b1.onclick = b1.src = './images/Botao1.gif'
 }
-//desativação do Bot1
+//desativação da animação de Bot1
 const b1D = () => {
     const b1 = document.getElementById('b1') //identifacação do b1
-        b1.onclick = b1.src = './images/Botao1.png' //troca o gif pelo png
+    b1.onclick = b1.src = './images/Botao1.png' //troca o gif pelo png
 }
 //animação para Bot2
 const b2A = () => {
@@ -17,12 +21,42 @@ const b2A = () => {
     b1.onclick = b2.src = '' //combinado com o de baixo faz com q o gif resete
     b1.onclick = b2.src = './images/Botao2.gif'
 }
-//desativação do Bot2
+//desativação da animação de Bot2
 const b2D = () => {
     const b2 = document.getElementById('b2') //identifacação do b1
         b2.onclick = b2.src = './images/Botao2.png' //troca o gif pelo png
 }
+//proteção anti-spam de botões
+const AS = () => {
+    const b1 = document.getElementById('bot1') //identifacação do b1
+    const b2 = document.getElementById('bot2') //identifacação do b2
+    b1.disabled = true
+    b2.disabled = true
 
+    espera(()=>{b1.disabled = false; b2.disabled = false})
+}
+//funções para executar transição fade
+const fadeout = () => {
+    document.getElementById("FadeOut").style.opacity = '1';
+    document.getElementById("FadeOut").style.zIndex = '10';
+}
+const fadein = () => {
+    document.getElementById("FadeOut").style.opacity = '0';
+    document.getElementById("FadeOut").style.zIndex = '-1';
+}
+//função que desabilita uma quantidade n de botões durante 2 segundos, para evitar spam de botões
+const Dbot = (...bot) => {
+    bot.disabled = true;
+    setTimeout(() => {bot.disabled = false}, 2000)
+}
+//função para esperar 2 segundos para executar outra funçao
+const espera = (func) => {
+    setTimeout(func, 2000)
+}
+//função para esperar 5 segundos para executar outra funçao, usada na troca de dias
+const espera5 = (func) => {
+    setTimeout(func, 5000)
+}
 //animação para "X"s e resetar o jogo caso a função seja chamada 4 vezes (4 erros)
 const marcaX = () => {
     if(document.getElementById('x3').style.display != 'inline'){document.getElementById('x3').style.display = 'inline'}
@@ -108,25 +142,18 @@ const percorreManual = (pgs, p = 0) => {
     }
 }
 
-const finalização = new Event('fim')
+const páginas = document.getElementsByClassName("página")
 
-const escreveDialogo = (dialogo, parte = 0) => {
-    const bot3 = document.getElementById("bot3");
-    const bot4 = document.getElementById("bot4");
-    const areaT = document.getElementById("transcT")
+percorreManual(páginas)
 
-    if (parte === dialogo.length-1) {
-        areaT.textContent = dialogo[parte].textContent
-        bot4.onclick = () => escreveDialogo(dialogo, parte-1)
-        bot3.onclick = document.dispatchEvent(finalização)
+// tarefas do dia 1
+const tarefasD1 = [
+    {
+        texto: '-VOCÊ VÊ NO RADAR UMA FROTA COM CERCA DE 7 NAVES NA FRONTEIRA, TODOS IDENTIFICADAS COMO CRUZADORES, NENHUM TENDO ASSINATURA IMPERIAL. LEITURAS APONTAM MAIS DE 40 CANHÕES EM CADA LADO DAS NAVES E UM TAMANHO ENTRE 3,5 E 2 KM. LEITURAS SUGEREM CERCA DE 50 MIL PESSOAS NA NAVE. NÃO HÁ INDÍCIOS DE ARMAMENTOS EXTRA EM NENHUMA NAVE. NENHUMA LEITURA FOI CAPAZ DE IDENTIFICAR ALGUM TIPO DE MERCADORIA ALÉM DOS SUPRIMENTOS DA NAVE-', 
+        resposta: 2
+    },
+    {
+        texto: '-VOCÊ VÊ NO RADAR UMA FROTA DE 18 NAVES NA FRONTEIRA, SENDO 15 IDENTIFICADAS COMO FRAGATAS E 3 GALEÕES, NENHUM TENDO ASSINATURA IMPERIAL. LEITURAS APONTAM QUE NAS FRAGATAS HÁ UMA VARIAÇÃO DE 65 ATÉ 68 CANHÕES, JÁ NOS GALEÕES 100 EM CADA. EM RELAÇÃO AO TAMANHO, AS FRAGATAS TEM TODAS 2 POR 1 KM, JÁ OS GALEÕES SÃO 2 COM 4 POR 2 KM, E O OUTRO COM 6 POR 2 KM. LEITURAS SUGEREM 200 MIL PESSOAS JUNTANDO OS GALEÕES E 750 MIL NO RESTO. NÃO HÁ INDÍCIOS DE ARMAMENTOS EXTRAS EM NENHUMA NAVE. MERCADORIA FOI IDENTIFICADA NOS 3 GALEÕES,SEUS RESPECTIVOS CAPITÃES POSSUEM LICENÇA MERCANTE-', 
+        resposta: 1
     }
-    else if (parte === 0) {
-        areaT.textContent = dialogo[parte].textContent
-        bot3.onclick = () => escreveDialogo(dialogo, parte+1)
-    }
-    else {
-        areaT.textContent = dialogo[parte].textContent
-        bot4.onclick = () => escreveDialogo(dialogo, parte-1)
-        bot3.onclick = () => escreveDialogo(dialogo, parte+1)
-    }
-}
+]
