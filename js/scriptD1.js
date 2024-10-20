@@ -20,16 +20,12 @@ const b2D = () => desativaBotao('b2', './images/Botao2.png');
 
 //animação para "X"s e resetar o jogo caso a função seja chamada 4 vezes (4 erros)
 const marcaX = () => {
-    const xs = ['x1', 'x2', 'x3']
-    const xVisivel =xs.find(id => document.getElementById(id).style.display !== 'inline')
-
-    if (xvisivel) {
-        document.getElementById(xVisivel).style.display = 'inline'
-    } else {
-        const fadeOut = document.getElementByid('FadeOut');
-        fadeOut.style.opacity ='1';
-        fadeOut.stily.zIndex = '10';
-        setTimeout(() => location.reload(true), 2000);
+    if(document.getElementById('x3').style.display != 'inline'){document.getElementById('x3').style.display = 'inline'}
+    else if (document.getElementById('x2').style.display != 'inline'){document.getElementById('x2').style.display = 'inline'}
+    else if (document.getElementById('x1').style.display != 'inline'){document.getElementById('x1').style.display = 'inline'}
+    else {
+        fadeout()
+        setTimeout(()=>location.reload(true),2000)
     }
 };
 
