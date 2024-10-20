@@ -126,7 +126,7 @@ const tarefa1 = () => {
     areaT.innerHTML = tarefasD1[0].texto;
 
     bot1.onclick = () => {AS(); marcaX();areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(tarefa2)};
-    bot2.onclick = () => {AS(); areaT.innerHTML = '-ACESSO NEGADO-'; b2A(); espera(tarefa2)};
+    bot2.onclick = () => {AS(); areaT.innerHTML = '-ACESSO NEGADO-'; b2A(); espera(tarefa2);canh()};
     bot3.disabled = true;
     bot4.disabled = true;
 }
@@ -140,7 +140,7 @@ const tarefa2 = () => {
     areaT.innerHTML = tarefasD1[1].texto;
 
     bot1.onclick = () => {AS();areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(dilema1)};
-    bot2.onclick = () => {AS();marcaX();areaT.innerHTML = '-ACESSO NEGADO-'; b2A(); espera(dilema1)};
+    bot2.onclick = () => {AS();marcaX();areaT.innerHTML = '-ACESSO NEGADO-'; b2A(); espera(dilema1); canh()};
     bot3.disabled = true;
     bot4.disabled = true;
 }
@@ -175,7 +175,7 @@ const dilema11 = () => {
     areaT.innerHTML = 'Não atire! Por favor, nos escute, somos antigos soldados da casa RavenHawk, a casa que tinha controle do planeta antes da Lady Theodora tomar controle, estamos sem ter para onde ir, depois de nosso líder ter sido acusado e morto por traição não conseguimos encontrar trabalho em lugar nenhum, sei que somos de casas rivais e que suas ordens devem ser de atirar em nós, mas por favor tenha piedade, nossa frota esta de acordo com o regulamento, se você nós deixar entrar o sistema não irá te punir, não iremos contar para ninguém do que você fez! Por favor, tenha misericórdia e nós de a chance de encontrar abrigo no planeta novamente.'
 
     bot1.onclick = () => {AS();monitorT.innerHTML = 'SISTEMA';areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(dilema1H)};
-    bot2.onclick = () => {AS();monitorT.innerHTML = 'SISTEMA' ;areaT.innerHTML = '-ACESSO NEGADO-'; b2A(); espera(dilema1D)};
+    bot2.onclick = () => {AS();monitorT.innerHTML = 'SISTEMA' ;areaT.innerHTML = '-ACESSO NEGADO-'; b2A(); espera(dilema1D);canh()};
     bot3.disabled = true;
     bot4.disabled = true;
 }

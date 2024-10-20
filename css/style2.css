@@ -310,9 +310,9 @@
 }
 .game-board #radar {
     position: absolute;
-    width: 25%;
+    width: 27%;
     top: 20%;
-    right: 38.25%;
+    right: 37%;
     z-index: -1;
 }
 .game-board #medalhas {
@@ -328,11 +328,10 @@
     top: 10%;
 }
 .game-board #livro {
-    display: none;
     position: absolute;
     left: 26%;
-    top: 55%;
-    width: 15%;
+    bottom: 22%;
+    width: 18%;
     z-index: -1;
 }
 .game-board .botao1 {
@@ -341,7 +340,7 @@
     width: 3.5%;
     height: 7%;
     font-size: 20px;
-    top: 20%;
+    top: 27%;
     z-index: 5;
 }
 .game-board .botao1 #bot1 {
@@ -357,13 +356,20 @@
     width: 100%;
     height: 100%;
 }
+.game-board #MCanhões {
+    position: absolute;
+    z-index: 3;
+    right: 7%;
+    width: 15%;
+    bottom: 32%;
+}
 .game-board .botao2 {
     position: absolute;
-    right: 15%;
+    right: 25%;
     width: 3.5%;
     height: 7%;
     font-size: 20px;
-    top: 20%;
+    top: 55%;
     z-index: 5;
 }
 .game-board .botao2 #bot2 {

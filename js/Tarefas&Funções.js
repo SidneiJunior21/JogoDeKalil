@@ -14,6 +14,11 @@ const b1D = () => {
     const b1 = document.getElementById('b1') //identifacação do b1
     b1.onclick = b1.src = './images/Botao1.png' //troca o gif pelo png
 }
+const canh = () => {
+    const can = document.getElementById('MCanhões')
+    can.src = ''
+    can.src = './images/MCanhões.gif'
+}
 //animação para Bot2
 const b2A = () => {
     const b1 = document.getElementById('b2') //identifacação do b1
