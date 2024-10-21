@@ -17,7 +17,7 @@ const d2C1 = () => {
     bot3.disabled = false;
 
     monitorT.innerHTML = 'SISTEMA'
-    areaT.innerHTML = '-BEM VINDO DE VOLTA OFICIAL, SUA FREQUÊNCIA FOI ATUALIZADA COM SUCESSO, MANTENHA A SUA FREQUÊNCIA COMO O ESPERADO POR 5 DIAS E TERÁ UM BÔNUS DE 1 MINUTO E MEIO EM SEU HORÁRIO DE INTERVALO, SIRVA BEM, VIVA BEM. ATIVIDADE FRONTEIRIÇA ALTA, AGUARDANDO SEU COMANDO-'
+    areaT.innerHTML = '-BEM VINDO DE VOLTA OFICIAL, SUA FREQUÊNCIA FOI ATUALIZADA COM SUCESSO, MANTENHA A SUA FREQUÊNCIA COMO O ESPERADO POR 5 DIAS E TERÁ UM BÔNUS DE 1 MINUTO E MEIO EM SEU HORÁRIO DE INTERVALO. SIRVA BEM, VIVA BEM. ATIVIDADE FRONTEIRIÇA ALTA, AGUARDANDO SEU COMANDO-'
 
     bot3.onclick = d2t1
 }
@@ -84,7 +84,7 @@ const d2d2 = () => {
     bot4.disabled = false;
     des();
 
-    areaT.innerHTML = 'Ei, Oficial, me escute enquanto o há tempo, perdoe-me por o que vou dizer, mas preciso de um favor seu, ouvi dizer que a frota mercante que vinha trazendo suprimentos foi roubada por piratas, pelo que eu ouvi roubaram sua documentação junto com a carga, mas ainda são eles, devem chegar ainda hoje, por favor Oficial, deixe eles entrarem, as cidades estão sem suprimentos, o povo está com fome.'
+    areaT.innerHTML = 'Ei, Oficial, me escute enquanto o há tempo, perdoe-me por o que vou dizer, mas preciso de um favor seu, um passarinho me contou que a frota mercante que vinha trazendo suprimentos foi roubada por piratas, pelo que eu ouvi roubaram sua documentação junto com a carga, mas ainda são eles, devem chegar ainda hoje, por favor Oficial, deixe eles entrarem, as cidades estão sem suprimentos, o povo está com fome.'
 
     bot3.onclick = d2d3
     bot4.onclick = d2d1
