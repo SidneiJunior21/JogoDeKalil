@@ -102,9 +102,10 @@ const apresentaDilema = (numD) => (dilema, trilha, i = 0) => {
     const processaDecisao = (escolha) => {
         //exibe diálogo correspondente à decisão
         monitorT.innerHTML = 'SISTEMA'
-        areaT.innerHTML = escolha === 'abrir' ? dilema.conseq.abrir.texto : dilema.conseq.matar.texto
-        escolha === 'abrir' ? b2A() : b1A()
-        escolha === 'abrir' ? esc() : canh()
+        areaT.scrollTop = 0;
+        areaT.innerHTML = escolha === 'abrir' ? dilema.conseq.abrir.texto : dilema.conseq.matar.texto;
+        escolha === 'abrir' ? b2A() : b1A();
+        escolha === 'abrir' ? esc() : canh();
         //guarda decisão
         const passo = escolha === 'abrir' ? dilema.conseq.abrir.trilha : dilema.conseq.matar.trilha
         const trilhaAtt = [...trilha]
@@ -117,8 +118,9 @@ const apresentaDilema = (numD) => (dilema, trilha, i = 0) => {
         areaT.innerHTML = '-TRANSMISSÃO EM ANDAMENTO-'
 
         espera(() => {
-            monitorT.innerHTML = dilema.interlocutores[i]
-            areaT.innerHTML = dilema.textos[i]
+            monitorT.innerHTML = dilema.interlocutores[i];
+            areaT.scrollTop = 0;
+            areaT.innerHTML = dilema.textos[i];
             b1A(); b2A();
 
             bot3.onclick = i === dilema.interlocutores.length-1 ? null : () => apresentaDilema(dilema, i+1)
@@ -128,6 +130,7 @@ const apresentaDilema = (numD) => (dilema, trilha, i = 0) => {
         })
     } else {
         monitorT.innerHTML = dilema.interlocutores[i]
+        areaT.scrollTop = 0;
         areaT.innerHTML = dilema.textos[i]
         b1A(); b2A();
 
