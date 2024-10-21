@@ -36,10 +36,17 @@ const b2D = () => {
 const esc = () =>{
     const escudo = document.getElementById('GEscudos')
     escudo.src = './images/GEscudosD.gif'
-    espera5(()=>{escudo.src='./images/GEscudos.gif'})
+    espera3(()=>{escudo.src='./images/GEscudos.gif'})
 }
 //proteção anti-spam de botões
-const AS = () => Dbot(document.getElementById('bot1'), document.getElementById('bot2'))
+const AS = () => {
+    const b1 = document.getElementById('bot1') //identifacação do b1
+    const b2 = document.getElementById('bot2') //identifacação do b2
+    b1.disabled = true
+    b2.disabled = true
+    espera(()=>{b1.disabled = false; b2.disabled = false})
+    b2.onclick = b2.src = './images/Botao2.png' //troca o gif pelo png
+}
 //funções para executar transição fade
 const fadeout = () => {
     document.getElementById("FadeOut").style.opacity = '1';
@@ -49,11 +56,6 @@ const fadein = () => {
     document.getElementById("FadeOut").style.opacity = '0';
     document.getElementById("FadeOut").style.zIndex = '-1';
 }
-//função que desabilita uma quantidade n de botões durante 2 segundos, para evitar spam de botões
-const Dbot = (...bot) => {
-    bot.disabled = true;
-    setTimeout(() => {bot.disabled = false}, 2000)
-}
 //função para esperar 2 segundos para executar outra funçao
 const espera = (func) => {
     setTimeout(func, 2000)
@@ -61,6 +63,10 @@ const espera = (func) => {
 //função para esperar 5 segundos para executar outra funçao, usada na troca de dias
 const espera5 = (func) => {
     setTimeout(func, 5000)
+}
+//função para esperar 3.5 segundos para executar outra funçao, usada na troca de dias
+const espera3 = (func) => {
+    setTimeout(func, 3500)
 }
 //animação para "X"s e resetar o jogo caso a função seja chamada 4 vezes (4 erros)
 const marcaX = () => {
@@ -206,6 +212,25 @@ const tarefasD2 = [
     },
     {
         texto: '-VOCÊ VÊ NO RADAR UMA FROTA DE 5 NAVES NA FRONTEIRA, SENDO 4 IDENTIFICADAS COMO FRAGATAS E 1 COMO IMPERATORIS, A IMPERATORIS TEM ASSINATURA IMPERIAL, AS FRAGATAS PARECEM ESTAR ESCOLTANDO ELA. LEITURAS APONTAM QUE HÁ UMA VARIAÇÃO DE 64 ATÉ 70 CANHÕES NAS FRAGATAS E 200 NA IMPERATORIS. LEITURAS DIZEM QUE TODAS AS FRAGATAS TEM 2 POR 1 KM, E A IMPERATORIS 10 POR 4 KM. LEITURAS SUGEREM 250 MIL PESSOAS NO CONJUNTO DE FRAGATAS E MAIS 250 MIL NA IMPERATORIS. NÃO HÁ INDÍCIOS DE ARMAMENTOS EXTRAS EM NENHUMA FRAGATA, JÁ NA IMPERATORIS HÁ TORPEDOS, ARÍETE, ARMAS ANTI-PROJÉTIL E CANHÕES MAGNÊTICOS. NENHUMA LEITURA FOI CAPAZ DE IDENTIFICAR ALGUM TIPO DE MERCADORIA ALÉM DOS SUPRIMENTOS DAS NAVES-', 
+        resposta: 1
+    }
+]
+// tarefas do dia 3
+const tarefasD3 = [
+    {
+        texto: '-VOCÊ VÊ NO RADAR UMA FROTA COM CERCA DE 420 NAVES NA FRONTEIRA, TODOS SEM IDENTIFICAÇÃO ESPECÍFICA. LEITURAS APONTAM A AUSÊNCIA DE CANHÕES NAS NAVES E UM TAMANHO QUE VARIA DE 1 POR 1.5 KM E 2 POR 2 KM. LEITURAS SUGEREM CERCA DE 941 MIL PESSOAS NA FROTA. NÃO IDENTIFICAMOS ARMAMENTOS EXTRAS EM NENHUMA DAS NAVES. AS LEITURAS IDENTIFICARAM TIPOS VARIADOS DE MERCADORIA, EMBORA NENHUM DOS CAPITÃES DAS NAVES POSSUA LICENÇA MERCANTE REGISTRADA-', 
+        resposta: 1
+    },
+    {
+        texto: '-VOCÊ VÊ NO RADAR UMA FROTA DE 6 NAVES NA FRONTEIRA, SENDO IDENTIFICADAS COMO CRUZADORES PESADOS, NENHUM TENDO ASSINATURA IMPERIAL. LEITURAS APONTAM QUE HÁ UMA VARIAÇÃO DE 45 ATÉ 48 CANHÕES EM CADA LADO DE CADA NAVE. EM RELAÇÃO AO TAMANHO, VARIAM ENTRE 4 POR 2,5 KM E 6 POR 2,5 KM. LEITURAS SUGEREM 420 MIL PESSOAS TOTAIS. TODAS POSSUEM TORPEDOS E ARMAS ANTI-PROJÉTIL. NENHUMA LEITURA FOI CAPAZ DE IDENTIFICAR ALGUM TIPO DE MERCADORIA ALÉM DOS SUPRIMENTOS DAS NAVES-', 
+        resposta: 2
+    },
+    {
+        texto: '-VOCÊ VÊ NO RADAR UMA FROTA DE 15 NAVES NA FRONTEIRA, SENDO TODAS FRAGATA, NENHUMA TENDO ASSINATURA IMPERIAL. LEITURAS APONTAM QUE HÁ UMA VARIAÇÃO DE 70 ATÉ 80 CANHÕES EM CADA. SOBRE O TAMANHO, LEITURAS DIZEM APONTAM 4 POR 2 KM EM 14 GALEÕES E 5 POR 2,5 KM NA RESTANTE. LEITURAS SUGEREM 540 MIL PESSOAS NA FROTA. FORAM IDENTIFICADOS TORPEDOS, ARMAS ANTI-PROJÉTIL E CANHÕES MAGNÊTICOS EM TODAS. FORAM IDENTIFICADAS MERCADORIAS A BORDO DE TODAS, APESAR DA AUSÊNCIA DA LICENÇA MERCANTE-', 
+        resposta: 2
+    },
+    {
+        texto: '-VOCÊ VÊ NO RADAR UMA FROTA DE 8 NAVES NA FRONTEIRA, SENDO 5 IDENTIFICADAS COMO FRAGATAS E 3 COMO GALEÕES, OS GALEÕES TEM ASSINATURA IMPERIAL, AS FRAGATAS PARECEM ESTAR ESCOLTANDO ELA. LEITURAS APONTAM QUE HÁ UMA VARIAÇÃO DE 64 ATÉ 70 CANHÕES NAS FRAGATAS E 270 NO CONJUNTO DOS GALEÕES. LEITURAS DIZEM QUE TODAS AS FRAGATAS TEM 2 POR 1 KM, E OS GALEÕES 6 POR 2 KM. LEITURAS SUGEREM 250 MIL PESSOAS NO CONJUNTO DE FRAGATAS E MAIS 260 MIL NA IMPERATORIS. NÃO HÁ INDÍCIOS DE ARMAMENTOS EXTRAS EM NENHUMA FRAGATA, JÁ NOS GALEÕES HÁ TORPEDOS, ARÍETE E ARMAS ANTI-PROJÉTIL. NAS FRAGATAS, NENHUMA LEITURA FOI CAPAZ DE IDENTIFICAR ALGUM TIPO DE MERCADORIA ALÉM DOS SUPRIMENTOS, JÁ NOS GALEÕES, MERCADORIA FOI IDENTIFICADA JUNTO COM SUAS DEVIDAS LICENÇAS MERCANTES. UM DOS GALEÕES ARMAMENTO ANTI-PLANETÁRIO, ACOMPANHADA DE SUA DEVIDA PERMISSÃO IMPERIAL-', 
         resposta: 1
     }
 ]
