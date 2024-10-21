@@ -35,7 +35,7 @@ const d2t1 = () => {
 
     areaT.innerHTML = tarefasD2[0].texto;
 
-    bot1.onclick = () => {AS();areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(d2t2)};
+    bot1.onclick = () => {AS();areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(d2t2);esc()};
     bot2.onclick = () => {AS();marcaX();areaT.innerHTML = '-ACESSO NEGADO-'; b2A(); espera(d2t2);canh()};
     bot3.disabled = true;
     bot4.disabled = true;
@@ -49,7 +49,7 @@ const d2t2 = () => {
 
     areaT.innerHTML = tarefasD2[1].texto;
 
-    bot1.onclick = () => {AS();areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(d2d1)};
+    bot1.onclick = () => {AS();areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(d2d1);esc()};
     bot2.onclick = () => {AS();marcaX();areaT.innerHTML = '-ACESSO NEGADO-'; b2A(); espera(d2d1);canh()};
     bot3.disabled = true;
     bot4.disabled = true;
@@ -79,18 +79,10 @@ const d2d2 = () => {
     const areaT = document.getElementById("transcT");
     const monitorT = document.getElementById("monitorT");
     bot1.disabled = true;
-    b1D();
     bot2.disabled = true;
-    b2D();
     bot3.disabled = false;
     bot4.disabled = false;
-    document.getElementById('caveira').src = "./images/caveira-fechada-px.png"
-    document.getElementById('radar').src = "./images/RadarDPX.png"
-    document.getElementById('filtroM').style.display = 'none'
-    monitorT.style.display = 'none'
-    document.getElementById('Tdia').style.display = 'none'
-    document.getElementById('Sdia').style.display = 'none'
-    document.getElementById('MCanhões').src = './images/MCanhõesD.png'
+    des();
 
     areaT.innerHTML = 'Ei, Oficial, me escute enquanto o há tempo, perdoe-me por o que vou dizer, mas preciso de um favor seu, ouvi dizer que a frota mercante que vinha trazendo suprimentos foi roubada por piratas, pelo que eu ouvi roubaram sua documentação junto com a carga, mas ainda são eles, devem chegar ainda hoje, por favor Oficial, deixe eles entrarem, as cidades estão sem suprimentos, o povo está com fome.'
 
@@ -119,17 +111,7 @@ const d2d4 = () => {
     const bot4 = document.getElementById("bot4");
     const areaT = document.getElementById("transcT");
     const monitorT = document.getElementById("monitorT");
-    b1A();
-    b2A();
-    document.getElementById('caveira').src = "./images/caveira-px.gif"
-    document.getElementById('radar').src = "./images/RadarPX.gif"
-    document.getElementById('filtroM').style.display = 'inline'
-    monitorT.style.display = 'inline'
-    document.getElementById('Tdia').style.textAlign = 'center'
-    document.getElementById('Tdia').style.display = 'inline'
-    document.getElementById('Sdia').style.display = 'inline'
-    document.getElementById('MCanhões').src = './images/MCanhões.png'
-
+    ati()
 
     monitorT.innerHTML = 'SISTEMA'
     areaT.innerHTML = '-SISTEMAS 100 POR CENTO FUNCIONAIS NOVAMENTE, VOLTANDO A OBRIGAÇÕES DIÁRIAS-';
@@ -152,7 +134,7 @@ const d2t3 = () => {
 
     areaT.innerHTML = tarefasD2[2].texto;
 
-    bot1.onclick = () => {AS();marcaX();areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(d2t4)};
+    bot1.onclick = () => {AS();marcaX();areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(d2t4);esc()};
     bot2.onclick = () => {AS();areaT.innerHTML = '-ACESSO NEGADO-'; b2A(); espera(d2t4);canh()};
     bot3.disabled = true;
     bot4.disabled = true;
@@ -166,7 +148,7 @@ const d2t4 = () => {
 
     areaT.innerHTML = tarefasD2[3].texto;
 
-    bot1.onclick = () => {AS();areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(dilema2)};
+    bot1.onclick = () => {AS();areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(dilema2);esc()};
     bot2.onclick = () => {AS();marcaX();areaT.innerHTML = '-ACESSO NEGADO-'; b2A(); espera(dilema2);canh()};
     bot3.disabled = true;
     bot4.disabled = true;
@@ -201,7 +183,7 @@ const dilema21 = () => {
     monitorT.innerHTML = 'Capitão de Classe Galeão'
     areaT.innerHTML = 'Sumo Oficial, escute o que nós temos a dizer, nossa frota foi saqueada por piratas enquanto vinha até seu planeta, roubaram parte de nossa carga e toda documentação. Ainda temos carga o bastante para suprir as necessidades básicas do planeta, lhe imploro para permitir nossa entrada. Caso negue, sairemos prejudicados também, pois não tem quem compre o que restou de nossa carga, seremos obrigados a descartar ela.'
 
-    bot1.onclick = () => {AS();monitorT.innerHTML = 'SISTEMA';areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(dilema2H)};
+    bot1.onclick = () => {AS();monitorT.innerHTML = 'SISTEMA';areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(dilema2H);esc()};
     bot2.onclick = () => {AS();monitorT.innerHTML = 'SISTEMA' ;areaT.innerHTML = '-ACESSO NEGADO-'; b2A(); espera(dilema2D);canh()};
     bot3.onclick = dilema22;
     bot4.disabled = true;
@@ -220,7 +202,7 @@ const dilema22 = () => {
     monitorT.innerHTML = 'SISTEMA'
     areaT.innerHTML = '-RETIRANDO A FALTA DE DOCUMENTAÇÃO, TODAS AS 57 NAVES DA FROTA SEGUEM O REGULAMENTO-'
 
-    bot1.onclick = () => {AS();monitorT.innerHTML = 'SISTEMA';areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(dilema2H)};
+    bot1.onclick = () => {AS();monitorT.innerHTML = 'SISTEMA';areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(dilema2H);esc()};
     bot2.onclick = () => {AS();monitorT.innerHTML = 'SISTEMA' ;areaT.innerHTML = '-ACESSO NEGADO-'; b2A(); espera(dilema2D);canh()};
     bot3.disabled = true;
     bot4.onclick = dilema21;

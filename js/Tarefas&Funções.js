@@ -14,6 +14,7 @@ const b1D = () => {
     const b1 = document.getElementById('b1') //identifacação do b1
     b1.onclick = b1.src = './images/Botao1.png' //troca o gif pelo png
 }
+//faz com que os canhões atirem
 const canh = () => {
     const can = document.getElementById('MCanhões')
     can.src = ''
@@ -29,8 +30,13 @@ const b2A = () => {
 //desativação da animação de Bot2
 const b2D = () => {
     const b2 = document.getElementById('b2') //identifacação do b1
-    b2.disabled = true
     b2.onclick = b2.src = './images/Botao2.png' //troca o gif pelo png
+}
+//faz com que os escudos desliguem
+const esc = () =>{
+    const escudo = document.getElementById('GEscudos')
+    escudo.src = './images/GEscudosD.gif'
+    espera5(()=>{escudo.src='./images/GEscudos.gif'})
 }
 //proteção anti-spam de botões
 const AS = () => Dbot(document.getElementById('bot1'), document.getElementById('bot2'))
@@ -66,6 +72,33 @@ const marcaX = () => {
         document.getElementById("FadeOut").style.zIndex = '10';
         setTimeout(()=>location.reload(true),2000)
     }
+}
+//desativa todos os eletronicos
+const des = () => {
+    b1D();
+    b2D();
+    document.getElementById('caveira').src = "./images/caveira-fechada-px.png"
+    document.getElementById('radar').src = "./images/RadarDPX.png"
+    document.getElementById('filtroM').style.display = 'none'
+    monitorT.style.display = 'none'
+    document.getElementById('Tdia').style.display = 'none'
+    document.getElementById('Sdia').style.display = 'none'
+    document.getElementById('MCanhões').src = './images/MCanhõesD.png'
+    document.getElementById('GEscudos').src = './images/MCanhõesD.png'
+}
+//ativa todos os eletronicos
+const ati = () => {
+    b1A();
+    b2A();
+    document.getElementById('caveira').src = "./images/caveira-px.gif"
+    document.getElementById('radar').src = "./images/RadarPX.gif"
+    document.getElementById('filtroM').style.display = 'inline'
+    monitorT.style.display = 'inline'
+    document.getElementById('Tdia').style.textAlign = 'center'
+    document.getElementById('Tdia').style.display = 'inline'
+    document.getElementById('Sdia').style.display = 'inline'
+    document.getElementById('MCanhões').src = './images/MCanhões.png'
+    document.getElementById('GEscudos').src = './images/GEscudos.gif'
 }
 
 //animação para a comporta do manual:

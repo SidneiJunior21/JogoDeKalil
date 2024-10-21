@@ -363,6 +363,13 @@
     width: 15%;
     bottom: 32%;
 }
+.game-board #GEscudos {
+    position: absolute;
+    z-index: 3;
+    right: 7%;
+    width: 15%;
+    bottom: 60%;
+}
 .game-board .botao2 {
     position: absolute;
     right: 25%;
