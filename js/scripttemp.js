@@ -112,6 +112,9 @@ const apresentaDilema = (numD) => (dilema, trilha, i = 0) => {
     const bot2 = document.getElementById("bot2")
 
     const processaDecisao = (escolha) => {
+        //trava botões (impede mudança de decisão ou spam)
+        bot1.onclick = null;
+        bot2.onclick = null;
         //exibe diálogo correspondente à decisão
         monitorT.innerHTML = 'SISTEMA'
         areaT.scrollTop = 0;
