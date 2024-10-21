@@ -84,7 +84,7 @@ const d2d2 = () => {
     bot4.disabled = false;
     des();
 
-    areaT.innerHTML = 'Ei, Oficial, me escute enquanto o há tempo, perdoe-me por o que vou dizer, mas preciso de um favor seu, um passarinho me contou que a frota mercante que vinha trazendo suprimentos foi roubada por piratas, pelo que eu ouvi roubaram sua documentação junto com a carga, mas ainda são eles, devem chegar ainda hoje, por favor Oficial, deixe eles entrarem, as cidades estão sem suprimentos, o povo está com fome.'
+    areaT.innerHTML = 'Ei, Oficial, me escute enquanto o há tempo! Perdoe-me pelo que vou dizer, mas preciso de um favor seu. Um passarinho me contou que a frota mercante que vinha trazendo suprimentos foi roubada por piratas. Pelo que eu ouvi roubaram a documentação junto com a carga, mas ainda são eles, que devem chegar ainda hoje. Por favor Oficial, deixe eles entrarem, as cidades estão sem suprimentos, o povo está com fome.'
 
     bot3.onclick = d2d3
     bot4.onclick = d2d1
@@ -99,7 +99,7 @@ const d2d3 = () => {
     bot3.disabled = false;
     bot4.disabled = false;
 
-    areaT.innerHTML = 'Não se preocupe com Eles, não podem nos ouvir, não enquanto o sistema está desligado, pense bem no que eu disse Oficial, o povo conta com o senhor.'
+    areaT.innerHTML = 'Não se preocupe, Eles não podem nos ouvir. Não enquanto o sistema está desligado. Pense bem no que eu disse, Oficial. O povo conta com o senhor...'
 
     bot3.onclick = d2d4
     bot4.onclick = d2d2
