@@ -79,18 +79,10 @@ const d2d2 = () => {
     const areaT = document.getElementById("transcT");
     const monitorT = document.getElementById("monitorT");
     bot1.disabled = true;
-    b1D();
     bot2.disabled = true;
-    b2D();
     bot3.disabled = false;
     bot4.disabled = false;
-    document.getElementById('caveira').src = "./images/caveira-fechada-px.png"
-    document.getElementById('radar').src = "./images/RadarDPX.png"
-    document.getElementById('filtroM').style.display = 'none'
-    monitorT.style.display = 'none'
-    document.getElementById('Tdia').style.display = 'none'
-    document.getElementById('Sdia').style.display = 'none'
-    document.getElementById('MCanhões').src = './images/MCanhõesD.png'
+    des();
 
     areaT.innerHTML = 'Ei, Oficial, me escute enquanto o há tempo, perdoe-me por o que vou dizer, mas preciso de um favor seu, ouvi dizer que a frota mercante que vinha trazendo suprimentos foi roubada por piratas, pelo que eu ouvi roubaram sua documentação junto com a carga, mas ainda são eles, devem chegar ainda hoje, por favor Oficial, deixe eles entrarem, as cidades estão sem suprimentos, o povo está com fome.'
 
@@ -119,17 +111,7 @@ const d2d4 = () => {
     const bot4 = document.getElementById("bot4");
     const areaT = document.getElementById("transcT");
     const monitorT = document.getElementById("monitorT");
-    b1A();
-    b2A();
-    document.getElementById('caveira').src = "./images/caveira-px.gif"
-    document.getElementById('radar').src = "./images/RadarPX.gif"
-    document.getElementById('filtroM').style.display = 'inline'
-    monitorT.style.display = 'inline'
-    document.getElementById('Tdia').style.textAlign = 'center'
-    document.getElementById('Tdia').style.display = 'inline'
-    document.getElementById('Sdia').style.display = 'inline'
-    document.getElementById('MCanhões').src = './images/MCanhões.png'
-
+    ati()
 
     monitorT.innerHTML = 'SISTEMA'
     areaT.innerHTML = '-SISTEMAS 100 POR CENTO FUNCIONAIS NOVAMENTE, VOLTANDO A OBRIGAÇÕES DIÁRIAS-';
