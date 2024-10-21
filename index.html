@@ -44,7 +44,7 @@
 
             <div class="areamonitor">
                 <div class="monitor"> 
-                    <p id="monitorT"> 14° Comandante de Armas </p> 
+                    <p id="monitorT"></p> 
                 </div>
             </div>
         </div>
@@ -144,25 +144,40 @@
 
     <div class="dialogos">
         <div id="introdução">
+            <p class="interlocIntro" id="1"> 14° Comandante de Armas </p>
             <p class="intro" id="1">
                 Devido a acusações de traição, o antigo oficial foi... Afastado do serviço, se é que podemos falar assim. Mas não se preocupe Oficial, se não quiser ter o mesmo final que o antigo teve, faça diferente, tome as decisões certas e as coisas vão dar certo no final, o Deus-Imperador garantirá que vai dar certo.
             </p>
+            <p class="interlocIntro" id="2"> 14° Comandante de Armas </p>
             <p class="intro" id="2">
                 E não se esqueça do juramento que você fez, "Vivo para servir, servirei até a morte. e se o imperador pedir, mesmo morto vou servir". Imagino que você saiba das responsabilidades que um Sumo Oficial Fronteiriço tem, mas mesmo assim irei relembra-lo, você decide tudo que entra e sai desse planeta, permitindo a passagem de quem deve e usando das anti-aéreas em quem tiver a entrada negada.
             </p>
+            <p class="interlocIntro" id="3"> 14° Comandante de Armas </p>
             <p class="intro" id="3">
-                Lembre-se, ninguém que tenha a entrada negada pode simplesmente fugir, ter a entrada negada quer dizer que o Deus-Imperador nunca quis sua presença aqui e ter vindo aqui sabendo disso é heresia, e você sabe bem o que acontece com hereges, Oficial, de certo modo tem seu emprego por conta da heresia dos outros. <button class="botcontinuar" id="1" onclick="escreveDialogo(dialogoTut)">Continuar...</button>
+                Lembre-se, ninguém que tenha a entrada negada pode simplesmente fugir, ter a entrada negada quer dizer que o Deus-Imperador nunca quis sua presença aqui e ter vindo aqui sabendo disso é heresia, e você sabe bem o que acontece com hereges, Oficial, de certo modo tem seu emprego por conta da heresia dos outros. <button class="botcontinuar" id="1" onclick="escreveDialogo(interlocTut, dialogoTut)">Continuar...</button>
             </p>
         </div>
 
         <div id="tutorial">
+            <p class="interlocTut" id="1"> 14° Comandante de Armas </p>
             <p class="tut" id="1">
                 Imagino que já tenha se familiarizado com a mesa de controle, o botão de cima faz com que a entrada seja permitida, o de baixo ordena as baterias anti-aéreas a disparar e o botão com o símbolo imperial à esquerda do radar abre seu manual de campo. Tenha em mente que não temos tempo para falhas, estamos em situação crítica e qualquer erro não será tolerado, não podemos dar chance aos hereges para que nos derrubem. O que eu estou dizendo é que não há confirmação para os botões, um clique é o necessário para ter sua mensagem passada, somente aperte o botão quando tiver certo do que fazer.
             </p>
+            <p class="interlocTut" id="2"> 14° Comandante de Armas </p>
             <p class="tut" id="2">
                 Nos próximos momentos uma frota trazendo mais soldados da guarda da casa Von Velancius chegará para garantir a ordem, permita as entradas deles, e permita assim que eles aparecerem, esses soldados são de extrema importância, em hipótese alguma dispare as baterias na frota, será executado se fizer isso. Estarei deixando você sozinho agora, sirva bem e viva bem, adeus Oficial. <button class="botcontinuar" id="2" onclick="tutorial()">Continuar...</button>
             </p>
         </div>
+    </div>
+
+    <div class="dilemas">
+        <div class="dilema1">
+            <p class="interlocsD1" id="1">Capitão de Classe Raeda</p>
+            <p class="textosD1">Não atire! Por favor, nos escute, somos antigos soldados da casa RavenHawk, a casa que tinha controle do planeta antes da Lady Theodora tomar controle, estamos sem ter para onde ir, depois de nosso líder ter sido acusado e morto por traição não conseguimos encontrar trabalho em lugar nenhum, sei que somos de casas rivais e que suas ordens devem ser de atirar em nós, mas por favor tenha piedade, nossa frota esta de acordo com o regulamento, se você nós deixar entrar o sistema não irá te punir, não iremos contar para ninguém do que você fez! Por favor, tenha misericórdia e nós de a chance de encontrar abrigo no planeta novamente.</p>
+        </div>
+        <div class="dilema2"></div>
+        <div class="dilema3"></div>
+        <div class="dilema4"></div>
     </div>
 
 </body>

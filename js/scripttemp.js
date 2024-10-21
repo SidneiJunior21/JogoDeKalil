@@ -1,7 +1,8 @@
-const escreveDialogo = (dialogo, parte = 0) => {
+const escreveDialogo = (interlocutores, dialogo, parte = 0) => {
     const bot3 = document.getElementById("bot3")
     const bot4 = document.getElementById("bot4")
     const areaT = document.getElementById("transcT")
+    const monitorT = document.getElementById("monitorT")
 
     if (parte === dialogo.length) {
         // Remove os ouvintes de eventos ao chegar no final do diálogo
@@ -10,11 +11,12 @@ const escreveDialogo = (dialogo, parte = 0) => {
         return
     }
     
+    monitorT.innerHTML = interlocutores[parte].innerHTML
     areaT.scrollTop = 0
     areaT.innerHTML = dialogo[parte].innerHTML
 
-    bot3.onclick = () => escreveDialogo(dialogo, parte + 1)
-    bot4.onclick = parte === 0 ? null : () => escreveDialogo(dialogo, parte - 1)
+    bot3.onclick = () => escreveDialogo(interlocutores, dialogo, parte + 1)
+    bot4.onclick = parte === 0 ? null : () => escreveDialogo(interlocutores, dialogo, parte - 1)
 }
 
 const passaTarefas = (penalidade, tarefas, nT = 0) => {
@@ -54,6 +56,18 @@ const passaTarefas = (penalidade, tarefas, nT = 0) => {
     }
 }
 
+const fDia = (dia, trilha) => {
+    fadeout();
+    espera(cDia(dia+1)(trilha))
+}
+const cDia = (dia) => (trilha) => {
+    espera(() => fadein())
+    espera(() => {
+        document.getElementById('Tdia').innerHTML = `'${dia}'`;
+        escreveDialogo()
+    })
+}
+
 /*
     estrutura do dilema:
         - interlocutor(es) (varia)
@@ -73,7 +87,7 @@ const geraConseq = (abrir, matar) => {
     }
     return {...consequência}
 }
-const geraDilema = (...interlocutores) => (...textos) => (conseq) => {
+const geraDilema = (interlocutores) => (textos) => (conseq) => {
     const dilema = {
         interlocutores: interlocutores,
         textos: textos,
@@ -96,8 +110,6 @@ const apresentaDilema = (numD) => (dilema, trilha, i = 0) => {
     const monitorT = document.getElementById("monitorT")
     const bot1 = document.getElementById("bot1")
     const bot2 = document.getElementById("bot2")
-    const bot3 = document.getElementById("bot3")
-    const bot4 = document.getElementById("bot4")
 
     const processaDecisao = (escolha) => {
         //exibe diálogo correspondente à decisão
@@ -111,33 +123,15 @@ const apresentaDilema = (numD) => (dilema, trilha, i = 0) => {
         const trilhaAtt = [...trilha]
         trilhaAtt[numD] = passo
         //chama próx dia passando escolhasAtt
+        espera5(() => fdia1())
     }
-
-    if (i === 0) {
-        monitorT.innerHTML = 'SISTEMA'
-        areaT.innerHTML = '-TRANSMISSÃO EM ANDAMENTO-'
-
-        espera(() => {
-            monitorT.innerHTML = dilema.interlocutores[i];
-            areaT.scrollTop = 0;
-            areaT.innerHTML = dilema.textos[i];
-            b1A(); b2A();
-
-            bot3.onclick = i === dilema.interlocutores.length-1 ? null : () => apresentaDilema(dilema, i+1)
-            bot4.onclick = null
-            bot1.onclick = () => processaDecisao('abrir')
-            bot2.onclick = () => processaDecisao('matar')
-        })
-    } else {
-        monitorT.innerHTML = dilema.interlocutores[i]
-        areaT.scrollTop = 0;
-        areaT.innerHTML = dilema.textos[i]
+    areaT.innerHTML = '-TRANSMISSÃO EM ANDAMENTO-'
+    monitorT.innerHTML = 'SISTEMA'
+    bot1.onclick = () => processaDecisao('abrir');
+    bot2.onclick = () => processaDecisao('matar');
+    espera(() => {
         b1A(); b2A();
-
-        bot3.onclick = i === dilema.interlocutores.length-1 ? null : () => apresentaDilema(dilema, i+1)
-        bot4.onclick = () => apresentaDilema(dilema, i-1)
-        bot1.onclick = () => processaDecisao('abrir')
-        bot1.onclick = () => processaDecisao('matar')
-    }
+        escreveDialogo(dilema.interlocutores, dilema.textos, i);
+    })
     
 }

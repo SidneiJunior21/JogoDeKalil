@@ -491,6 +491,9 @@
 .dialogos {
     display: none;
 }
+.dilemas {
+    display: none;
+}
 
 .botcontinuar {
     background: none;
