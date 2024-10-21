@@ -6,6 +6,8 @@ const dialogoTut = document.getElementsByClassName("tut")
 const interlocTut = document.getElementsByClassName("interlocTut")
 const continuar = document.getElementsByClassName("botcontinuar")
 
+escreveDialogo(interlocIntro, dialogoIntro)
+
 const tutorial = () => {
     const areaT = document.getElementById("transcT")
     const monitorT = document.getElementById("monitorT")
@@ -22,14 +24,10 @@ const tutorial = () => {
 
 }
 
-escreveDialogo(interlocIntro, dialogoIntro)
-    .then()
-
-
 //dilema do dia
 const trilha = [0, 0, 0, 0]
 
-const dilema1 = geraDilema(document.getElementsByClassName("interlocsD1"))(document.getElementsByClassName("textosD1"))
+const dilemaD1 = geraDilema(document.getElementsByClassName("interlocsD1"))(document.getElementsByClassName("textosD1"))
 (geraConseq(
     {
         texto: '-OBRIGAÇÕES DIÁRIAS CONCLUÍDAS, SAIA IMEDIATAMENTE DA SALA E RETORNE AMANHÃ. SERÁ PUNIDO DE ACORDO COM O REGULAMENTO CASO NÃO RETORNE, APROVEITE O SEU DIA, OFICIAL-', 

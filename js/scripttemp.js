@@ -1,8 +1,3 @@
-const esperaFunc = (func, ...args) => {
-    new Promise((resolve) => {
-        func(...args) == 0 ? resolve() : null
-    })
-}
 const escreveDialogo = (interlocutores, dialogo, parte = 0) => {
     const bot3 = document.getElementById("bot3")
     const bot4 = document.getElementById("bot4")
@@ -13,16 +8,15 @@ const escreveDialogo = (interlocutores, dialogo, parte = 0) => {
         // Remove os ouvintes de eventos ao chegar no final do diálogo
         bot3.onclick = null
         bot4.onclick = null
-        return 0
+        return
     }
-    else {
-        monitorT.innerHTML = interlocutores[parte].innerHTML
-        areaT.scrollTop = 0
-        areaT.innerHTML = dialogo[parte].innerHTML
+    
+    monitorT.innerHTML = interlocutores[parte].innerHTML
+    areaT.scrollTop = 0
+    areaT.innerHTML = dialogo[parte].innerHTML
 
-        bot3.onclick = () => escreveDialogo(interlocutores, dialogo, parte + 1)
-        bot4.onclick = parte === 0 ? null : () => escreveDialogo(interlocutores, dialogo, parte - 1)
-    }
+    bot3.onclick = () => escreveDialogo(interlocutores, dialogo, parte + 1)
+    bot4.onclick = parte === 0 ? null : () => escreveDialogo(interlocutores, dialogo, parte - 1)
 }
 
 const passaTarefas = (penalidade, tarefas, nT = 0) => {
@@ -30,7 +24,7 @@ const passaTarefas = (penalidade, tarefas, nT = 0) => {
    const textoMonitor = document.getElementById("monitorT")
    const bot1 = document.getElementById("bot1")
    const bot2 = document.getElementById("bot2")
-
+   
    if (nT < tarefas.length-1) {
         areaT.scrollTop = 0
         areaT.innerHTML = tarefas[nT].texto
@@ -66,18 +60,11 @@ const fDia = (dia, trilha) => {
     fadeout();
     espera(cDia(dia+1)(trilha))
 }
-
-const dia2Chamado = new Event('dia2Chamado')
-const dia3Chamado = new Event('dia3Chamado')
-const dia4Chamado = new Event('dia4Chamado')
-
 const cDia = (dia) => (trilha) => {
     espera(() => fadein())
     espera(() => {
         document.getElementById('Tdia').innerHTML = `'${dia}'`;
-        dia === 2 ? dia2(trilha)
-        : dia === 3 ? dia3(trilha)
-        : dia4(trilha)
+        escreveDialogo()
     })
 }
 
