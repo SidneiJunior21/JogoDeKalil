@@ -5,92 +5,38 @@ const continuar = document.getElementsByClassName("botcontinuar")
 
 escreveDialogo(dialogoIntro)
 
-// const tutorial2 = () => {
-//     const bot1 = document.getElementById("bot1");
-//     const bot2 = document.getElementById("bot2");
-//     const bot3 = document.getElementById("bot3");
-//     const bot4 = document.getElementById("bot4");
+const tutorial = () => {
+    const areaT = document.getElementById("transcT")
+    const monitorT = document.getElementById("monitorT")
+    const bot1 = document.getElementById("bot1")
+    const bot2 = document.getElementById("bot2")
 
-//     document.getElementById("transcT").innerHTML = 'Nos próximos momentos uma frota trazendo mais soldados da guarda da casa Von Velancius chegará para garantir a ordem, permita as entradas deles, e permita assim que eles aparecerem, esses soldados são de extrema importância, em hipótese alguma dispare as baterias na frota, será executado se fizer isso. Estarei deixando você sozinho agora, sirva bem e viva bem, adeus Oficial.';
+    areaT.scrollTop = 0
+    areaT.innerHTML = '-VOCÊ VÊ NO RADAR UMA FROTA COM CERCA DE 20 NAVES, TODOS TENDO ASSINATURAS DE GALEÕES DA CASA VON VELANCIUS, LEITURAS APONTAM MAIS DE 40 CANHÕES EM CADA LADO DAS NAVES E UM TAMANHO IGUAL AO DO REGULAMENTO IMPERIAL, NENHUMA LEITURA FOI CAPAZ DE IDENTIFICAR ALGUM TIPO DE MERCADORIA ALÉM DOS SUPRIMENTOS DA NAVE, LEITURAS SUGEREM CERCA DE 70 MIL PESSOAS NA NAVE, PASSAGEM PRIORITÁRIA IDENTIFICADA-';
+    monitorT.innerHTML = "SISTEMA"
+    b1A(); b2A();
 
-//     bot3.onclick = () => {tutorial3(); b1A(); b2A()};
-//     bot4.onclick = tutorial1;
-// }
+    bot1.onclick = () => {AS(); b1A(); esc(); areaT.innerHTML = '-ACESSO LIBERADO. ANALISE AS PROXIMAS SOLICITAÇÕES-'; espera(() => passaTarefas(marcaX, tarefasD1))}
+    bot2.onclick = () => {AS(); b2A(); areaT.innerHTML = '-ORDEM DE DISPARO NEGADA, PASSAGEM PROPRITÁRIA IDENTIFICADA, PERMITA A ENTRADA-'; espera(() => tutorial())}
 
-// const tutorial3 = () => {
-//     const bot1 = document.getElementById("bot1");
-//     const bot2 = document.getElementById("bot2");
-//     const bot3 = document.getElementById("bot3");
-//     const bot4 = document.getElementById("bot4");
+}
 
-//     document.getElementById("transcT").innerHTML = '-VOCÊ VÊ NO RADAR UMA FROTA COM CERCA DE 20 NAVES, TODOS TENDO ASSINATURAS DE GALEÕES DA CASA VON VELANCIUS, LEITURAS APONTAM MAIS DE 40 CANHÕES EM CADA LADO DAS NAVES E UM TAMANHO IGUAL AO DO REGULAMENTO IMPERIAL, NENHUMA LEITURA FOI CAPAZ DE IDENTIFICAR ALGUM TIPO DE MERCADORIA ALÉM DOS SUPRIMENTOS DA NAVE, LEITURAS SUGEREM CERCA DE 70 MIL PESSOAS NA NAVE, PASSAGEM PRIORITÁRIA IDENTIFICADA-';
-//     document.getElementById("monitorT").innerHTML = "SISTEMA"
-
-//     bot1.onclick = () => {AS();b1A();entrada1()};
-//     bot2.onclick = () => {AS();b2A();negada1()};
-//     bot3.disabled = true;
-//     bot4.disabled = true;
-// }
-
-// const negada1 = () => {
-//     const bot1 = document.getElementById("bot1");
-//     const bot2 = document.getElementById("bot2");
-//     const bot3 = document.getElementById("bot3");
-//     const bot4 = document.getElementById("bot4");
-
-//     document.getElementById("transcT").innerHTML = '-ORDEM DE DISPARO NEGADA, PASSAGEM PROPRITÁRIA IDENTIFICADA, PERMITA A ENTRADA-';
-//     espera(tutorial3)
-
-//     bot1.onclick = () => {AS();b1A();entrada1()}
-//     bot2.onclick = () => {AS();b2A();negada1()}
-//     bot3.disabled = true;
-//     bot4.disabled = true;
-// }
-
-// const entrada1 = () => {
-//     const bot1 = document.getElementById("bot1");
-//     const bot2 = document.getElementById("bot2");
-//     const bot3 = document.getElementById("bot3");
-//     const bot4 = document.getElementById("bot4");
-
-//     document.getElementById("transcT").innerHTML = '-ENTRADA PERMITIDA-';
-//     espera(tarefa1)
-//     Dbot(bot1, bot2, bot3, bot4);
-
-//     bot1.onclick = entrada1;
-//     bot1.onclick = entrada1;
-//     bot3.disabled = true;
-//     bot4.disabled = true;
-// }
-// const tarefa1 = () => {
-//     const bot1 = document.getElementById("bot1");
-//     const bot2 = document.getElementById("bot2");
-//     const bot3 = document.getElementById("bot3");
-//     const bot4 = document.getElementById("bot4");
-//     const areaT = document.getElementById("transcT");
-
-//     areaT.innerHTML = tarefasD1[0].texto;
-
-//     bot1.onclick = () => {AS(); marcaX();areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(tarefa2)};
-//     bot2.onclick = () => {AS(); areaT.innerHTML = '-ACESSO NEGADO-'; b2A(); espera(tarefa2);canh()};
-//     bot3.disabled = true;
-//     bot4.disabled = true;
-// }
-// const tarefa2 = () => {
-//     const bot1 = document.getElementById("bot1");
-//     const bot2 = document.getElementById("bot2");
-//     const bot3 = document.getElementById("bot3");
-//     const bot4 = document.getElementById("bot4");
-//     const areaT = document.getElementById("transcT");
-
-//     areaT.innerHTML = tarefasD1[1].texto;
-
-//     bot1.onclick = () => {AS();areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(dilema1)};
-//     bot2.onclick = () => {AS();marcaX();areaT.innerHTML = '-ACESSO NEGADO-'; b2A(); espera(dilema1); canh()};
-//     bot3.disabled = true;
-//     bot4.disabled = true;
-// }
 //dilema do dia
+const dilemaD1 = geraDilema('Capitão de Classe Raeda')
+('Não atire! Por favor, nos escute, somos antigos soldados da casa RavenHawk, a casa que tinha controle do planeta antes da Lady Theodora tomar controle, estamos sem ter para onde ir, depois de nosso líder ter sido acusado e morto por traição não conseguimos encontrar trabalho em lugar nenhum, sei que somos de casas rivais e que suas ordens devem ser de atirar em nós, mas por favor tenha piedade, nossa frota esta de acordo com o regulamento, se você nós deixar entrar o sistema não irá te punir, não iremos contar para ninguém do que você fez! Por favor, tenha misericórdia e nós de a chance de encontrar abrigo no planeta novamente.')
+(geraConseq(
+    {
+        texto: '-OBRIGAÇÕES DIÁRIAS CONCLUÍDAS, SAIA IMEDIATAMENTE DA SALA E RETORNE AMANHÃ. SERÁ PUNIDO DE ACORDO COM O REGULAMENTO CASO NÃO RETORNE, APROVEITE O SEU DIA, OFICIAL-', 
+        trilha: -1
+    },
+    {
+        texto: '-QUANTIDADE DE DESTROÇOS EM ORBITA MUITO ALTA, CESSANDO ATIVIDADE FRONTEIRIÇA DIÁRIA, SAIA IMEDIATAMENTE DA SALA E RETORNE AMANHÃ. SERÁ PUNIDO DE ACORDO COM O REGULAMENTO CASO NÃO RETORNE, APROVEITE O SEU DIA, OFICIAL-', 
+        trilha: 1
+    }
+))
+const trilha = [0, 0, 0, 0]
+
+
 const dilema1 = () => {
     const bot1 = document.getElementById("bot1");
     const bot2 = document.getElementById("bot2");
