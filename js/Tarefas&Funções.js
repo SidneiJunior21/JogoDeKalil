@@ -14,6 +14,7 @@ const b1D = () => {
     const b1 = document.getElementById('b1') //identifacação do b1
     b1.onclick = b1.src = './images/Botao1.png' //troca o gif pelo png
 }
+//faz com que os canhões atirem
 const canh = () => {
     const can = document.getElementById('MCanhões')
     can.src = ''
@@ -29,7 +30,12 @@ const b2A = () => {
 //desativação da animação de Bot2
 const b2D = () => {
     const b2 = document.getElementById('b2') //identifacação do b1
-        b2.onclick = b2.src = './images/Botao2.png' //troca o gif pelo png
+    b2.onclick = b2.src = './images/Botao2.png' //troca o gif pelo png
+}
+const esc = () =>{
+    const escudo = document.getElementById('GEscudos')
+    escudo.src = './images/GEscudosD.gif'
+    espera5(()=>{escudo.src='./images/GEscudos.gif'})
 }
 //proteção anti-spam de botões
 const AS = () => {

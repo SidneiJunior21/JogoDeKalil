@@ -80,7 +80,7 @@ const tutorial3 = () => {
     document.getElementById("transcT").innerHTML = '-VOCÊ VÊ NO RADAR UMA FROTA COM CERCA DE 20 NAVES, TODOS TENDO ASSINATURAS DE GALEÕES DA CASA VON VELANCIUS, LEITURAS APONTAM MAIS DE 40 CANHÕES EM CADA LADO DAS NAVES E UM TAMANHO IGUAL AO DO REGULAMENTO IMPERIAL, NENHUMA LEITURA FOI CAPAZ DE IDENTIFICAR ALGUM TIPO DE MERCADORIA ALÉM DOS SUPRIMENTOS DA NAVE, LEITURAS SUGEREM CERCA DE 70 MIL PESSOAS NA NAVE, PASSAGEM PRIORITÁRIA IDENTIFICADA-';
     document.getElementById("monitorT").innerHTML = "SISTEMA"
 
-    bot1.onclick = () => {AS();b1A();entrada1()};
+    bot1.onclick = () => {AS();b1A();entrada1();esc()};
     bot2.onclick = () => {AS();b2A();negada1()};
     bot3.disabled = true;
     bot4.disabled = true;
@@ -125,7 +125,7 @@ const tarefa1 = () => {
 
     areaT.innerHTML = tarefasD1[0].texto;
 
-    bot1.onclick = () => {AS(); marcaX();areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(tarefa2)};
+    bot1.onclick = () => {AS(); marcaX();areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(tarefa2);esc()};
     bot2.onclick = () => {AS(); areaT.innerHTML = '-ACESSO NEGADO-'; b2A(); espera(tarefa2);canh()};
     bot3.disabled = true;
     bot4.disabled = true;
@@ -139,7 +139,7 @@ const tarefa2 = () => {
 
     areaT.innerHTML = tarefasD1[1].texto;
 
-    bot1.onclick = () => {AS();areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(dilema1)};
+    bot1.onclick = () => {AS();areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(dilema1);esc()};
     bot2.onclick = () => {AS();marcaX();areaT.innerHTML = '-ACESSO NEGADO-'; b2A(); espera(dilema1); canh()};
     bot3.disabled = true;
     bot4.disabled = true;
@@ -174,7 +174,7 @@ const dilema11 = () => {
     monitorT.innerHTML = 'Capitão de Classe Raeda'
     areaT.innerHTML = 'Não atire! Por favor, nos escute, somos antigos soldados da casa RavenHawk, a casa que tinha controle do planeta antes da Lady Theodora tomar controle, estamos sem ter para onde ir, depois de nosso líder ter sido acusado e morto por traição não conseguimos encontrar trabalho em lugar nenhum, sei que somos de casas rivais e que suas ordens devem ser de atirar em nós, mas por favor tenha piedade, nossa frota esta de acordo com o regulamento, se você nós deixar entrar o sistema não irá te punir, não iremos contar para ninguém do que você fez! Por favor, tenha misericórdia e nós de a chance de encontrar abrigo no planeta novamente.'
 
-    bot1.onclick = () => {AS();monitorT.innerHTML = 'SISTEMA';areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(dilema1H)};
+    bot1.onclick = () => {AS();monitorT.innerHTML = 'SISTEMA';areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(dilema1H);esc()};
     bot2.onclick = () => {AS();monitorT.innerHTML = 'SISTEMA' ;areaT.innerHTML = '-ACESSO NEGADO-'; b2A(); espera(dilema1D);canh()};
     bot3.disabled = true;
     bot4.disabled = true;
