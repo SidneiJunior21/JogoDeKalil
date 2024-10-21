@@ -21,25 +21,19 @@ const canh = () => {
 }
 //animação para Bot2
 const b2A = () => {
-    const b1 = document.getElementById('b2') //identifacação do b1
+    const b2 = document.getElementById('b2') //identifacação do b1
 
-    b1.onclick = b2.src = '' //combinado com o de baixo faz com q o gif resete
-    b1.onclick = b2.src = './images/Botao2.gif'
+    b2.onclick = b2.src = '' //combinado com o de baixo faz com q o gif resete
+    b2.onclick = b2.src = './images/Botao2.gif'
 }
 //desativação da animação de Bot2
 const b2D = () => {
     const b2 = document.getElementById('b2') //identifacação do b1
-        b2.onclick = b2.src = './images/Botao2.png' //troca o gif pelo png
+    b2.disabled = true
+    b2.onclick = b2.src = './images/Botao2.png' //troca o gif pelo png
 }
 //proteção anti-spam de botões
-const AS = () => {
-    const b1 = document.getElementById('bot1') //identifacação do b1
-    const b2 = document.getElementById('bot2') //identifacação do b2
-    b1.disabled = true
-    b2.disabled = true
-
-    espera(()=>{b1.disabled = false; b2.disabled = false})
-}
+const AS = () => Dbot(document.getElementById('bot1'), document.getElementById('bot2'))
 //funções para executar transição fade
 const fadeout = () => {
     document.getElementById("FadeOut").style.opacity = '1';
@@ -160,7 +154,8 @@ const tarefasD1 = [
     {
         texto: '-VOCÊ VÊ NO RADAR UMA FROTA DE 18 NAVES NA FRONTEIRA, SENDO 15 IDENTIFICADAS COMO FRAGATAS E 3 GALEÕES, NENHUM TENDO ASSINATURA IMPERIAL. LEITURAS APONTAM QUE NAS FRAGATAS HÁ UMA VARIAÇÃO DE 65 ATÉ 68 CANHÕES, JÁ NOS GALEÕES 100 EM CADA. EM RELAÇÃO AO TAMANHO, AS FRAGATAS TEM TODAS 2 POR 1 KM, JÁ OS GALEÕES SÃO 2 COM 4 POR 2 KM, E O OUTRO COM 6 POR 2 KM. LEITURAS SUGEREM 200 MIL PESSOAS JUNTANDO OS GALEÕES E 750 MIL NO RESTO. NÃO HÁ INDÍCIOS DE ARMAMENTOS EXTRAS EM NENHUMA NAVE. MERCADORIA FOI IDENTIFICADA NOS 3 GALEÕES, SEUS RESPECTIVOS CAPITÃES POSSUEM LICENÇA MERCANTE-', 
         resposta: 1
-    }
+    },
+    '<button class="botcontinuar" id="2" onclick=>Continuar...</button>'
 ]
 // tarefas do dia 2
 const tarefasD2 = [
