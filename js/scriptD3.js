@@ -218,6 +218,8 @@ const dilema3H = () => {
     b1D();
     bot2.disabled = true;
     b2D();
+    const f3 = f2-1;
+    localStorage.setItem('f3', f3);
 
     monitorT.innerHTML = 'SISTEMA'
     areaT.innerHTML = '-QUANTIDADE DE NAVES ENTRANDO MUITO ALTA, CESSANDO ATIVIDADE FRONTEIRIÇA DIÁRIA, SAIA IMEDIATAMENTE DA SALA E RETORNE AMANHÃ, SERÁ PUNIDO DE ACORDO COM O REGULAMENTO CASO NÃO RETORNE, APROVEITE O SEU DIA, OFICIAL-'
@@ -234,6 +236,8 @@ const dilema3D = () => {
     b1D();
     bot2.disabled = true;
     b2D();
+    const f3 = f2+1;
+    localStorage.setItem('f3', f3);
 
     monitorT.innerHTML = 'SISTEMA'
     areaT.innerHTML = '-QUANTIDADE DE DESTROÇOS EM ORBITA MUITO ALTA, CESSANDO ATIVIDADE FRONTEIRIÇA DIÁRIA, SAIA IMEDIATAMENTE DA SALA E RETORNE AMANHÃ, SERÁ PUNIDO DE ACORDO COM O REGULAMENTO CASO NÃO RETORNE, APROVEITE O SEU DIA, OFICIAL-'
@@ -241,6 +245,7 @@ const dilema3D = () => {
 }
 //função para puxar próximo dia 
 const fdia3 = () => {
+    const f3 = localStorage.getItem('f3');
     fadeout();
     espera(cdia4())
 }
