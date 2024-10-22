@@ -22,7 +22,7 @@ const introT1 = () => {
     const bot3 = document.getElementById("bot3");
     const bot4 = document.getElementById("bot4");
 
-    document.getElementById("transcT").innerHTML = 'E não se esqueça do juramento que você fez, "Vivo para servir, servirei até a morte. e se o imperador pedir, mesmo morto vou servir". Imagino que você saiba das responsabilidades que um Sumo Oficial Fronteiriço tem, mas mesmo assim irei relembra-lo, você decide tudo que entra e sai desse planeta, permitindo a passagem de quem deve e usando das anti-aéreas em quem tiver a entrada negada.';
+    document.getElementById("transcT").innerHTML = 'E não se esqueça do juramento que você fez, "Vivo para servir, servirei até a morte. E se o imperador pedir, mesmo morto vou servir". Imagino que você saiba das responsabilidades que um Sumo Oficial Fronteiriço tem, mas mesmo assim irei relembra-lo, você decide tudo que entra e sai desse planeta, permitindo a passagem de quem deve e usando das anti-aéreas em quem tiver a entrada negada.';
 
     // Atualiza as consequências
     //document.getElementById("consequenciasT").innerHTML = "Você se lembrou do seu juramento.";
