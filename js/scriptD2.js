@@ -115,7 +115,7 @@ const d2d4 = () => {
 
     monitorT.innerHTML = 'SISTEMA'
     areaT.innerHTML = '-SISTEMAS 100 POR CENTO FUNCIONAIS NOVAMENTE, VOLTANDO A OBRIGAÇÕES DIÁRIAS-';
-    espera5(d2t3)
+    espera3(d2t3)
 
     bot1.disabled = true;
     bot2.disabled = true;
@@ -218,6 +218,7 @@ const dilema2H = () => {
     b1D();
     bot2.disabled = true;
     b2D();
+    const f1 = localStorage.getItem('f1');
     const f2 = f1-1;
     localStorage.setItem('f2', f2);
 
@@ -236,7 +237,8 @@ const dilema2D = () => {
     b1D();
     bot2.disabled = true;
     b2D();
-    const f2 = f1+1;
+    const f1 = localStorage.getItem('f1');
+    const f2 = parseInt(f1) + 1;
     localStorage.setItem('f2', f2);
 
     monitorT.innerHTML = 'SISTEMA'
@@ -248,5 +250,5 @@ const fdia2 = () => {
     const f2 = localStorage.getItem('f2')
     fadeout();
     espera(cdia3());
-    console.log(test1)
+    console.log(f2)
 }

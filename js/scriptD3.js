@@ -218,6 +218,7 @@ const dilema3H = () => {
     b1D();
     bot2.disabled = true;
     b2D();
+    const f2 = localStorage.getItem('f2');
     const f3 = f2-1;
     localStorage.setItem('f3', f3);
 
@@ -236,7 +237,8 @@ const dilema3D = () => {
     b1D();
     bot2.disabled = true;
     b2D();
-    const f3 = f2+1;
+    const f2 = localStorage.getItem('f2');
+    const f3 = parseInt(f2) + 1;
     localStorage.setItem('f3', f3);
 
     monitorT.innerHTML = 'SISTEMA'
@@ -247,5 +249,6 @@ const dilema3D = () => {
 const fdia3 = () => {
     const f3 = localStorage.getItem('f3');
     fadeout();
-    espera(cdia4())
+    espera(cdia4());
+    console.log(f3)
 }

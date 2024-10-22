@@ -1,3 +1,5 @@
+//const responsavel por definir o final do jogo
+const f = 0;
 const preIntro = () => {
     const bot1 = document.getElementById("bot1");
     const bot2 = document.getElementById("bot2");
@@ -11,9 +13,8 @@ const preIntro = () => {
 
     // Remove event listeners anteriores e adiciona os novos
     bot3.onclick = introT1;
-    bot4.onclick = nadakk;
+    bot4.onclick = null;
 }
-
 const introT1 = () => {
     const bot1 = document.getElementById("bot1");
     const bot2 = document.getElementById("bot2");
@@ -107,8 +108,7 @@ const entrada1 = () => {
     const bot4 = document.getElementById("bot4");
 
     document.getElementById("transcT").innerHTML = '-ENTRADA PERMITIDA-';
-    espera(tarefa1)
-    Dbot(bot1, bot2, bot3, bot4);
+    espera(tarefa1);
 
     bot1.onclick = entrada1;
     bot1.onclick = entrada1;
@@ -189,6 +189,8 @@ const dilema1H = () => {
     b1D();
     bot2.disabled = true;
     b2D();
+    const f1 = f-1;
+    localStorage.setItem('f1', f1);
 
     monitorT.innerHTML = 'SISTEMA'
     areaT.innerHTML = '-OBRIGAÇÕES DIÁRIAS CONCLUÍDAS, SAIA IMEDIATAMENTE DA SALA E RETORNE AMANHÃ, SERÁ PUNIDO DE ACORDO COM O REGULAMENTO CASO NÃO RETORNE, APROVEITE O SEU DIA, OFICIAL-'
@@ -205,6 +207,8 @@ const dilema1D = () => {
     b1D();
     bot2.disabled = true;
     b2D();
+    const f1 = f + 1;
+    localStorage.setItem('f1', f1);
 
     monitorT.innerHTML = 'SISTEMA'
     areaT.innerHTML = '-QUANTIDADE DE DESTROÇOS EM ORBITA MUITO ALTA, CESSANDO ATIVIDADE FRONTEIRIÇA DIÁRIA, SAIA IMEDIATAMENTE DA SALA E RETORNE AMANHÃ, SERÁ PUNIDO DE ACORDO COM O REGULAMENTO CASO NÃO RETORNE, APROVEITE O SEU DIA, OFICIAL-'
@@ -212,6 +216,8 @@ const dilema1D = () => {
 }
 //função para puxar próximo dia 
 const fdia1 = () => {
+    const f1 = localStorage.getItem('f1');
+    console.log(f1)
     fadeout();
     espera(cdia2())
 }

@@ -141,8 +141,8 @@ const dilema42 = () => {
     monitorT.innerHTML = '??? de Classe Fragata'
     areaT.innerHTML = 'Sumo Oficial, pelo amor do Deus-Imperador, LIBERE O ACESSO! Algo de muito errado está acontecendo aqui dentro. A Lady Theodora, ela esta construindo um Canhão Estelar aqui! Ela quer construir uma arma capaz de destruir estrelas com um único disparo, destruindo sistemas solares inteiros em um apertar de um botão. Não quero fazer parte dessa loucura. Por favor Oficial, libere o acesso, deixe-me fugir desse mundo insano.'
 
-    bot1.onclick = () => {AS();monitorT.innerHTML = 'SISTEMA';areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(finalH);esc()};
-    bot2.onclick = () => {AS();monitorT.innerHTML = 'SISTEMA' ;areaT.innerHTML = '-ACESSO NEGADO-'; b2A(); espera(finalD);canh()};
+    bot1.onclick = () => {AS();monitorT.innerHTML = 'SISTEMA';areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(dilema4H);esc()};
+    bot2.onclick = () => {AS();monitorT.innerHTML = 'SISTEMA' ;areaT.innerHTML = '-ACESSO NEGADO-'; b2A(); espera(dilema4D);canh()};
     bot3.onclick = dilema43;
     bot4.disabled = true;
 }
@@ -172,8 +172,11 @@ const dilema4H = () => {
     const bot4 = document.getElementById("bot4");
     const areaT = document.getElementById("transcT");
     const monitorT = document.getElementById("monitorT");
+    const f3 = localStorage.getItem('f3');
     const f4 = f3-2;
     localStorage.setItem('f4', f4);
+
+    analisaFinal(f4)
 
     bot1.disabled = true;
     bot2.disabled = true;
@@ -187,17 +190,20 @@ const dilema4D = () => {
     const bot4 = document.getElementById("bot4");
     const areaT = document.getElementById("transcT");
     const monitorT = document.getElementById("monitorT");
-    const f4 = f3+2;
+    const f3 = localStorage.getItem('f3');
+    const f4 = parseInt(f3) + 2;
     localStorage.setItem('f4', f4);
+
+    analisaFinal(f4)
 
     bot1.disabled = true;
     bot2.disabled = true;
     bot3.disabled = true;
     bot4.disabled = true;
 }
-const analisaFinal = () => {
-    const f4 = localStorage.getItem('f4');
-    if (fr > 0){
+const analisaFinal = (f4) => {
+    console.log(f4);;
+    if (f4 > 0){
         finalD()
     } else {finalH()}
 }
