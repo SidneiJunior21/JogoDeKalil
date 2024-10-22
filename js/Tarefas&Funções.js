@@ -1,6 +1,7 @@
 //função para fade-out do fundo preto:
 window.onload = () => {
-    fadein()
+    fadein();
+    preIntro()
 }
 //animação para Bot1
 const b1A = () => {
@@ -197,9 +198,7 @@ const tarefasD1 = [
     {
         texto: '-VOCÊ VÊ NO RADAR UMA FROTA DE 18 NAVES NA FRONTEIRA, SENDO 15 IDENTIFICADAS COMO FRAGATAS E 3 GALEÕES, NENHUM TENDO ASSINATURA IMPERIAL. LEITURAS APONTAM QUE NAS FRAGATAS HÁ UMA VARIAÇÃO DE 65 ATÉ 68 CANHÕES, JÁ NOS GALEÕES 100 EM CADA. EM RELAÇÃO AO TAMANHO, AS FRAGATAS TEM TODAS 2 POR 1 KM, JÁ OS GALEÕES SÃO 2 COM 4 POR 2 KM, E O OUTRO COM 6 POR 2 KM. LEITURAS SUGEREM 200 MIL PESSOAS JUNTANDO OS GALEÕES E 750 MIL NO RESTO. NÃO HÁ INDÍCIOS DE ARMAMENTOS EXTRAS EM NENHUMA NAVE. MERCADORIA FOI IDENTIFICADA NOS 3 GALEÕES, SEUS RESPECTIVOS CAPITÃES POSSUEM LICENÇA MERCANTE. NENHUM ARMAMENTO ANTI-PLANETÁRIO IDENTIFICADO-', 
         resposta: 1
-    },
-    '<button class="botcontinuar" id="2" onclick="apresentaDilema(1)(dilemaD1, trilha)">Continuar...</button>'
-
+    }
 ]
 // tarefas do dia 2
 const tarefasD2 = [
