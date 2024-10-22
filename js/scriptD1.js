@@ -6,7 +6,8 @@ const preIntro = () => {
     const bot3 = document.getElementById("bot3");
     const bot4 = document.getElementById("bot4");
 
-    document.getElementById("transcT").innerHTML = 'Devido a acusações de traição, o antigo oficial foi... Afastado do serviço, se é que podemos falar assim. Mas não se preocupe Oficial, se não quiser ter o mesmo final que o antigo teve, faça diferente, tome as decisões certas e as coisas vão dar certo no final, o Deus-Imperador garantirá que vai dar certo.';
+     document.getElementById("monitorT").innerHTML = '14º Comandante de Armas'
+     document.getElementById("transcT").innerHTML = 'Devido a acusações de traição, o antigo oficial foi... Afastado do serviço, se é que podemos falar assim. Mas não se preocupe Oficial, se não quiser ter o mesmo final que o antigo teve, faça diferente, tome as decisões certas e as coisas vão dar certo no final, o Deus-Imperador garantirá que vai dar certo.';
 
     // Atualiza as consequências
     //document.getElementById("consequenciasT").innerHTML = "Você se lembrou do seu juramento.";
