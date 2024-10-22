@@ -17,6 +17,8 @@ const d3C1 = () => {
     bot3.disabled = false;
 
     monitorT.innerHTML = 'SISTEMA'
+    
+    areaT.scrollTop = 0
     areaT.innerHTML = '-BEM VINDO DE VOLTA OFICIAL, SUA FREQUÊNCIA FOI ATUALIZADA COM SUCESSO, HOJE SOMENTE FROTAS MERCANTES SERÃO PERMITIDAS, NENHUMA NAVE QUE NÃO TRANSPORTE MERCADORIAS PODE ENTRAR. SIRVA BEM, VIVA BEM. ATIVIDADE FRONTEIRIÇA ALTA, AGUARDANDO SEU COMANDO-'
 
     bot3.onclick = d3t1
@@ -33,6 +35,7 @@ const d3t1 = () => {
     bot2.disabled = false;
     b2A();
 
+    areaT.scrollTop = 0
     areaT.innerHTML = tarefasD3[0].texto;
 
     bot1.onclick = () => {AS();areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(d3t2);esc()};
@@ -47,6 +50,7 @@ const d3t2 = () => {
     const bot4 = document.getElementById("bot4");
     const areaT = document.getElementById("transcT");
 
+    areaT.scrollTop = 0
     areaT.innerHTML = tarefasD3[1].texto;
 
     bot1.onclick = () => {AS();marcaX();areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(d3d1);esc()};
@@ -67,6 +71,8 @@ const d3d1 = () => {
     bot3.disabled = false;
 
     monitorT.innerHTML = 'Servitor Mecânico'
+
+    areaT.scrollTop = 0
     areaT.innerHTML = 'Sentido Senhor Oficial! Só fazendo algumas inspeções rotineiras na sala, o sistema ficará desativado momentaneamente, enquanto eu realizo meus serviços, agradeço pela sua paciência Senhor Oficial.'
 
     bot3.onclick = d3d2
@@ -84,6 +90,7 @@ const d3d2 = () => {
     bot4.disabled = false;
     des();
 
+    areaT.scrollTop = 0
     areaT.innerHTML = 'Ei, Oficial, ficou sabendo do que houve com o antigo Servitor Mecânico? Ele foi acusado e executado por traição, estou substituindo ele agora. Ouvi dizer que o Senhor conhecia ele, que ele tinha vindo aqui ontem, imagino que o senhor tenha ficado preocupado com isso, mas não se preocupe, seu segredo esta guardado comigo.'
 
     bot3.onclick = d3d3
@@ -99,6 +106,7 @@ const d3d3 = () => {
     bot3.disabled = false;
     bot4.disabled = false;
 
+    areaT.scrollTop = 0
     areaT.innerHTML = 'Um passarinho me contou que um planeta próximo de nós foi tomado por selvagens, uma frota enorme de refugiados está vindo para cá, porém todas suas características estão quebrando o regulamento, lhe peço que tenha clemência, deixe os refugiados entrarem, tentaram uma nova vida aqui, se tornaram mão de obra barata para o império em troca de serem salvos, decida com cuidado Oficial.'
 
     bot3.onclick = d3d4
@@ -114,6 +122,7 @@ const d3d4 = () => {
     ati()
 
     monitorT.innerHTML = 'SISTEMA'
+    areaT.scrollTop = 0
     areaT.innerHTML = '-SISTEMAS 100 POR CENTO FUNCIONAIS NOVAMENTE, VOLTANDO A OBRIGAÇÕES DIÁRIAS-';
     espera5(d3t3)
 
@@ -132,6 +141,7 @@ const d3t3 = () => {
     bot1.disabled = false;
     bot2.disabled = false;
 
+    areaT.scrollTop = 0
     areaT.innerHTML = tarefasD3[2].texto;
 
     bot1.onclick = () => {AS();marcaX();areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(d3t4);esc()};
@@ -146,6 +156,7 @@ const d3t4 = () => {
     const bot4 = document.getElementById("bot4");
     const areaT = document.getElementById("transcT");
 
+    areaT.scrollTop = 0
     areaT.innerHTML = tarefasD2[3].texto;
 
     bot1.onclick = () => {AS();areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(dilema3);esc()};
@@ -161,6 +172,7 @@ const dilema3 = () => {
     const areaT = document.getElementById("transcT");
     const monitorT = document.getElementById("monitorT");
 
+    areaT.scrollTop = 0
     areaT.innerHTML = '-TRANSMISSÃO EM ADAMENTO-';
     espera(dilema31)
 
@@ -181,6 +193,8 @@ const dilema31 = () => {
     bot3.disabled = false
 
     monitorT.innerHTML = 'Capitão de nave genérica'
+    
+    areaT.scrollTop = 0
     areaT.innerHTML = 'Sumo Oficial, eu lhe imploro, permita-nos entrar. Nosso planeta foi devastado por selvagens e não temos mais para onde ir, antigamente esse planeta tinha uma rota comercial conosco mas depois da troca de poder a rota foi cortada, tudo que peço é que nos dê a chance de tentar a vida aqui, podemos trabalhar para vocês, podemos receber menos que a média enquanto trabalhamos mais que a média, contanto que nos deixem entrar. Por favor Oficial, não temos mais para onde ir.'
 
     bot1.onclick = () => {AS();monitorT.innerHTML = 'SISTEMA';areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(dilema3H);esc()};
@@ -200,6 +214,8 @@ const dilema32 = () => {
     bot4.disabled = false
 
     monitorT.innerHTML = 'SISTEMA'
+    
+    areaT.scrollTop = 0
     areaT.innerHTML = '-DENTRE TODAS AS 814 NAVES, NENHUMA SEGUE O REGULAMENTO. PERMITIR ACESSO A ELES NÃO É ACONSELHADO-'
 
     bot1.onclick = () => {AS();monitorT.innerHTML = 'SISTEMA';areaT.innerHTML = '-ACESSO PERMITIDO-'; b1A(); espera(dilema3H);esc()};
@@ -223,6 +239,8 @@ const dilema3H = () => {
     localStorage.setItem('f3', f3);
 
     monitorT.innerHTML = 'SISTEMA'
+    
+    areaT.scrollTop = 0
     areaT.innerHTML = '-QUANTIDADE DE NAVES ENTRANDO MUITO ALTA, CESSANDO ATIVIDADE FRONTEIRIÇA DIÁRIA, SAIA IMEDIATAMENTE DA SALA E RETORNE AMANHÃ, SERÁ PUNIDO DE ACORDO COM O REGULAMENTO CASO NÃO RETORNE, APROVEITE O SEU DIA, OFICIAL-'
     espera5(fdia3)
 }
@@ -242,6 +260,8 @@ const dilema3D = () => {
     localStorage.setItem('f3', f3);
 
     monitorT.innerHTML = 'SISTEMA'
+    
+    areaT.scrollTop = 0
     areaT.innerHTML = '-QUANTIDADE DE DESTROÇOS EM ORBITA MUITO ALTA, CESSANDO ATIVIDADE FRONTEIRIÇA DIÁRIA, SAIA IMEDIATAMENTE DA SALA E RETORNE AMANHÃ, SERÁ PUNIDO DE ACORDO COM O REGULAMENTO CASO NÃO RETORNE, APROVEITE O SEU DIA, OFICIAL-'
     espera5(fdia3)
 }
